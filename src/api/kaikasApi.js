@@ -1,11 +1,8 @@
 import CaverExtKAS from "caver-js-ext-kas";
-//  require("caver-js-ext-kas");
-// const Caver = require("caver-js");
 import Caver from "caver-js";
-// const contractABI = require("../abi/mintNFT.json");
+import { isMobile } from "react-device-detect";
 import dotenv from "dotenv";
 dotenv.config();
-// require("dotenv").config();
 
 const klaytn = window.klaytn;
 const chainIdCypress = process.env.REACT_APP_CHAIN_ID_CYPRESS;
@@ -31,6 +28,9 @@ export const isUnlocked = async () => {
 };
 
 export const autoConnectWallet = async (connectWallet) => {
+  if (isMobile) {
+    return;
+  }
   return await isUnlocked().then(async (isUnlocked) => {
     //현재 지갑이 unlock일 때 현재 홈페이지가 지갑에 접근 할 수 있도록 승인 요청
     if (isUnlocked === true) {
