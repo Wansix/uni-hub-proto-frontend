@@ -3,6 +3,7 @@ import contractABI from "../abi/mintNFT.json";
 import axios from "axios";
 import * as kaikasApi from "./kaikasApi";
 import { isMobile } from "react-device-detect";
+import { defaultCatUrl } from "../img.js";
 
 import dotenv from "dotenv";
 dotenv.config();
@@ -115,7 +116,7 @@ export const getUserInfoFromAccount = async (setUserInfo) => {
           address: "",
           name: "",
           profileNFTid: 0,
-          profileImgUrl: "img/defaultCat.png",
+          profileImgUrl: defaultCatUrl,
           seed: 0,
           claimHerb: 0,
           profile_registered: false,
@@ -194,7 +195,7 @@ export const registerUserInfo = async (name, profileNFTid) => {
         address: address,
         name: name,
         profileNFTid: profileNFTid,
-        profileImgUrl: "img/defaultCat.png",
+        profileImgUrl: defaultCatUrl,
       };
 
       return await axios.post(url, send_param).then(async (res) => {

@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
+import { defaultCatUrl } from "../img.js";
 axios.defaults.withCredentials = true;
 
 export const Mymenu = () => {
@@ -11,7 +12,7 @@ export const Mymenu = () => {
     address: "",
     name: "",
     profileNFTid: 0,
-    profileImgUrl: "img/defaultCat.png",
+    profileImgUrl: defaultCatUrl,
     seed: 0,
     claimHerb: 0,
     profile_registered: false,
@@ -56,7 +57,7 @@ export const Mymenu = () => {
                 value={0}
                 defaultChecked
               ></input>
-              <img src={"img/defaultCat.png"}></img>
+              <img src={defaultCatUrl}></img>
             </label>
           </div>
         );
@@ -133,7 +134,7 @@ export const Mymenu = () => {
             tempUserInfo["name"] = nickName;
             tempUserInfo["profileNFTid"] = profileId;
 
-            tempUserInfo["profileImgUrl"] = "img/defaultCat.png";
+            tempUserInfo["profileImgUrl"] = defaultCatUrl;
 
             console.log("temp", tempUserInfo);
             const response = await unihubNFTApi.updateUserInfo(tempUserInfo);

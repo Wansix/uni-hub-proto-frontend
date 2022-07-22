@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import * as kaikasApi from "../api/kaikasApi";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
 import { isMobile } from "react-device-detect";
+import { defaultCatUrl } from "../img.js";
 
 const DEFAULT_ADDRESS = "0x00";
 
@@ -13,7 +14,7 @@ export const Profile = () => {
     address: "",
     name: "",
     profileNFTid: 0,
-    profileImgUrl: "img/defaultCat.png",
+    profileImgUrl: defaultCatUrl,
     seed: 0,
     claimHerb: 0,
     profile_registered: false,

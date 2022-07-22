@@ -2,13 +2,14 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { defaultCatUrl } from "../img.js";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="header__home">
         <a href="/">
-          <img src="img/defaultCat.png"></img>
+          <img src={defaultCatUrl}></img>
           <h1>Uni-hub</h1>
         </a>
       </div>

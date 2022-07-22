@@ -14,15 +14,13 @@ function Content() {
 
   const params = useParams();
 
-  const getPostContent = () => {
+  const getPostContent = async () => {
     const url = `${unihubServerURL}/board/getBoardList/${params.id}`;
     const send_param = {
       headers,
     };
 
-    axios.post(url, send_param).then((result) => {
-      console.log(result.data.postData);
-
+    axios.post(url, send_param).then(async (result) => {
       let postData = result.data.postData;
 
       const postingDate = postData.postingDate;
@@ -37,7 +35,8 @@ function Content() {
       const viewPostingDate = `${year}.${month}.${day}. ${hours}:${minutes}`;
 
       postData.postingDate = viewPostingDate;
-      setPostData(result.data.postData);
+
+      setPostData(postData);
     });
   };
 
@@ -86,7 +85,6 @@ function Content() {
 }
 
 export const CommunityDetail = () => {
-  console.log("dfsd");
   return (
     <div className="board-wrapper">
       <div className="boardName">Community</div>

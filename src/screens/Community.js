@@ -11,20 +11,6 @@ const unihubServerURL = process.env.REACT_APP_UNIHUB_SERVER_URL;
 const Board = () => {
   const [boardList, setBoardList] = useState([]);
 
-  // const getUserInfo = async (address) => {
-  //   // const address = kaikasApi.getCurrentAccount();
-
-  //   const url = `${unihubServerURL}/user/getUserInfo`;
-  //   const send_param = {
-  //     headers,
-  //     address: address,
-  //   };
-
-  //   return await axios.post(url, send_param).then(async (result) => {
-  //     return result.data.list;
-  //   });
-  // };
-
   const getBoardList = () => {
     const url = `${unihubServerURL}/board/getBoardList`;
     const send_param = {
