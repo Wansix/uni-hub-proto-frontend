@@ -1,13 +1,15 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import * as kaikasApi from "../api/kaikasApi";
+import * as unihubNFTApi from "../api/unihubNFTApi.js";
 axios.defaults.withCredentials = true;
 
 const headers = { withCredentials: true };
 const unihubServerURL = process.env.REACT_APP_UNIHUB_SERVER_URL;
 
-const kaikasApi = require("../api/kaikasApi.js");
-const unihubNFTApi = require("../api/unihubNFTApi.js");
+// const kaikasApi = require("../api/kaikasApi.js");
+// const unihubNFTApi = require("../api/unihubNFTApi.js");
 
 export const Mymenu = () => {
   const [userBalance, setUserBalance] = useState(0);

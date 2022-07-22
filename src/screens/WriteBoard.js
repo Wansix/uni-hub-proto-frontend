@@ -1,11 +1,13 @@
 import React from "react";
 import { CKEditor } from "ckeditor4-react";
 import { useState, useEffect } from "react";
+import * as kaikasApi from "../api/kaikasApi";
+import * as unihubNFTApi from "../api/unihubNFTApi.js";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-const kaikasApi = require("../api/kaikasApi.js");
-const unihubNFTApi = require("../api/unihubNFTApi.js");
+// const kaikasApi = require("../api/kaikasApi.js");
+// const unihubNFTApi = require("../api/unihubNFTApi.js");
 const headers = { withCredentials: true };
 
 const unihubServerURL = process.env.REACT_APP_UNIHUB_SERVER_URL;

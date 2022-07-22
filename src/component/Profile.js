@@ -1,9 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import * as kaikasApi from "../api/kaikasApi";
+import * as unihubNFTApi from "../api/unihubNFTApi.js";
 
-const kaikasApi = require("../api/kaikasApi.js");
-const unihubNFTApi = require("../api/unihubNFTApi.js");
-const mongoDBApi = require("../api/mongoDBApi.js");
+// const kaikasApi = require("../api/kaikasApi.js");
+// const unihubNFTApi = require("../api/unihubNFTApi.js");
+// const mongoDBApi = require("../api/mongoDBApi.js");
 
 const DEFAULT_ADDRESS = "0x00";
 

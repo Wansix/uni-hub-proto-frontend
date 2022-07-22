@@ -2,8 +2,8 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 
-const kaikasApi = require("../api/kaikasApi.js");
-const unihubNFTApi = require("../api/unihubNFTApi.js");
+import * as kaikasApi from "../api/kaikasApi";
+import * as unihubNFTApi from "../api/unihubNFTApi.js";
 
 export const Mint = () => {
   const [imgUrl, setImgUrl] = useState(
