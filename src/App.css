@@ -10,6 +10,8 @@
 @import "./css/components/home.css";
 @import "./css/components/topNFT.css";
 
+@import "./css/mobile.css";
+
 .App {
   display: flex;
   height: 100vh;
