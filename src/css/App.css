@@ -1,0 +1,16 @@
+/* Components */
+@import "components/main.css";
+@import "components/header.css";
+@import "components/container.css";
+@import "components/profile.css";
+@import "components/board.css";
+@import "components/content.css";
+@import "components/mint.css";
+@import "components/mymenu.css";
+@import "components/home.css";
+@import "components/topNFT.css";
+
+.App {
+  display: flex;
+  height: 100vh;
+}
