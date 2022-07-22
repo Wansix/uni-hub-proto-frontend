@@ -20,17 +20,18 @@ export const test = async () => {
 };
 
 export const isEnabled = async () => {
+  if (isMobile) return;
   return await klaytn._kaikas.isEnabled();
 };
 
 export const isUnlocked = async () => {
+  if (isMobile) return;
   return await klaytn._kaikas.isUnlocked();
 };
 
 export const autoConnectWallet = async (connectWallet) => {
-  if (isMobile) {
-    return;
-  }
+  if (isMobile) return;
+
   return await isUnlocked().then(async (isUnlocked) => {
     //현재 지갑이 unlock일 때 현재 홈페이지가 지갑에 접근 할 수 있도록 승인 요청
     if (isUnlocked === true) {
@@ -43,20 +44,24 @@ export const autoConnectWallet = async (connectWallet) => {
 };
 
 export const getCurrentAccount = () => {
+  if (isMobile) return;
   if (klaytn.selectedAddress === undefined) return 0;
 
   return klaytn.selectedAddress;
 };
 
 export const getBlockNumber = (setBlockNumber) => {
+  if (isMobile) return;
   const caver = new Caver(endpoint);
 
   caver.klay.getBlockNumber().then((blockNumber) => {
+    if (isMobile) return;
     setBlockNumber(blockNumber);
   });
 };
 
 export const getTokenListByOwner = async (address) => {
+  if (isMobile) return;
   if (address === undefined) return 0;
   const caverExtKas = new CaverExtKAS(
     chainIdCypress,
@@ -84,6 +89,7 @@ export const transferFrom = async (
   receiveAddress,
   amount
 ) => {
+  if (isMobile) return;
   const caver = new Caver(klaytn);
   const tokenInstance = await new caver.klay.KIP7(tokenAddress);
   console.log(tokenInstance);
@@ -98,6 +104,7 @@ export const transferFrom = async (
   }
 };
 export const approveToken = (tokenAddress, spenderAddress) => {
+  if (isMobile) return;
   const caver = new Caver(klaytn);
   const tokenInstance = new caver.klay.KIP7(tokenAddress);
   tokenInstance.approve(
@@ -107,6 +114,7 @@ export const approveToken = (tokenAddress, spenderAddress) => {
   );
 };
 export const connectKaikasWallet = async () => {
+  if (isMobile) return;
   try {
     const accounts = await klaytn.enable();
     const account = accounts[0];
@@ -123,6 +131,7 @@ export const connectKaikasWallet = async () => {
 };
 
 export const getBalanceKlay = async () => {
+  if (isMobile) return;
   if (klaytn.selectedAddress === undefined) return "0";
   const caver = new Caver(klaytn);
   try {
@@ -136,11 +145,13 @@ export const getBalanceKlay = async () => {
 };
 
 export const changedAccount = (func) => {
+  if (isMobile) return;
   console.log("event!!");
   window.klaytn.on("accountsChanged", func);
 };
 
 export const sendTransaction = (_to, _value) => {
+  if (isMobile) return;
   const caver = new Caver(klaytn);
   caver.klay
     .sendTransaction({
@@ -164,6 +175,7 @@ export const sendTransaction = (_to, _value) => {
 // myContract.methods.myMethod(123).encodeABI();
 
 export const executeContract = async (_to, _value, abi) => {
+  if (isMobile) return;
   const caver = new Caver(klaytn);
 
   return await caver.klay

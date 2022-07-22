@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import * as kaikasApi from "../api/kaikasApi";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
+import { isMobile } from "react-device-detect";
 
 const DEFAULT_ADDRESS = "0x00";
 
@@ -20,6 +21,7 @@ export const Profile = () => {
   });
 
   const checkChangedAccount = () => {
+    if (isMobile) return;
     console.log("changedAccount");
     const address = localStorage.getItem("userADDRESS");
     if (window.klaytn.selectedAddress != address) {
@@ -32,6 +34,7 @@ export const Profile = () => {
   };
 
   useEffect(() => {
+    if (isMobile) return;
     // console.log("useEffect");
     const address = localStorage.getItem("userADDRESS");
     kaikasApi.autoConnectWallet(connectWallet).then(() => {
@@ -45,11 +48,13 @@ export const Profile = () => {
   }, []);
 
   const test = async () => {
+    if (isMobile) return;
     await kaikasApi.test();
     unihubNFTApi.test();
   };
 
   const connectWallet = async () => {
+    if (isMobile) return;
     const account = await kaikasApi.connectKaikasWallet();
     if (account) {
       const frontAccount = account.substr(0, 4);

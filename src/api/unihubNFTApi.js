@@ -1,12 +1,8 @@
-// const Caver = require("caver-js");
-// const contractABI = require("../abi/mintNFT.json");
-// const axios = require("axios");
-// const kaikasApi = require("./kaikasApi");
-
 import Caver from "caver-js";
 import contractABI from "../abi/mintNFT.json";
 import axios from "axios";
 import * as kaikasApi from "./kaikasApi";
+import { isMobile } from "react-device-detect";
 
 import dotenv from "dotenv";
 dotenv.config();
@@ -35,6 +31,7 @@ export const test = () => {
 };
 
 export const getCurrentAccount = () => {
+  if (isMobile) return;
   const savedAddress = localStorage.getItem(USER_ADDRESS);
 
   if (savedAddress === null) {
@@ -45,6 +42,7 @@ export const getCurrentAccount = () => {
 };
 
 export const getUserInfo = async (setUserInfo) => {
+  if (isMobile) return;
   try {
     const savedAddress = localStorage.getItem(USER_ADDRESS);
     console.log(savedAddress);
@@ -74,6 +72,7 @@ export const getUserInfo = async (setUserInfo) => {
 
 // 지갑 연결시 유저 정보
 export const getUserInfoFromAccount = async (setUserInfo) => {
+  if (isMobile) return;
   try {
     const url = `${unihubServerURL}/user/getUserInfo`;
     const address = kaikasApi.getCurrentAccount();
@@ -133,6 +132,7 @@ export const getUserInfoFromAccount = async (setUserInfo) => {
 };
 
 export const updateUserInfo = async (userInfo) => {
+  if (isMobile) return;
   try {
     const address = kaikasApi.getCurrentAccount();
 
@@ -178,6 +178,7 @@ export const updateUserInfo = async (userInfo) => {
 };
 
 export const registerUserInfo = async (name, profileNFTid) => {
+  if (isMobile) return;
   try {
     const address = kaikasApi.getCurrentAccount();
 
@@ -221,6 +222,7 @@ export const registerUserInfo = async (name, profileNFTid) => {
 };
 
 export const getProfileImg = (setProfileImgUrl) => {
+  if (isMobile) return;
   const savedProfileImgUrl = localStorage.getItem(USER_IMAGE_URL);
 
   if (savedProfileImgUrl === null) {
@@ -236,6 +238,7 @@ export const getNFTInfo = (
   setAttributes,
   userProfileNFT_id
 ) => {
+  if (isMobile) return;
   // console.log("mintmint ID Info", userProfileNFT_id);
   tokenURI(userProfileNFT_id).then(async (result) => {
     const url = result;
@@ -271,6 +274,7 @@ export const getProfileImageFromContract = async (
   setProfileImgUrl,
   userProfileNFT_id
 ) => {
+  if (isMobile) return;
   // console.log("mintmint ID IMg", userProfileNFT_id);
 
   return await tokenURI(userProfileNFT_id).then(async (result) => {
@@ -295,6 +299,7 @@ export const getProfileImageFromContract = async (
 };
 
 export const getTokenInfoJson = async (tokenId) => {
+  if (isMobile) return;
   return await tokenURI(tokenId).then(async (result) => {
     const url = result;
 
@@ -316,6 +321,7 @@ export const getTokenInfoJson = async (tokenId) => {
 };
 
 export const tokenURI = async (NFT_id) => {
+  if (isMobile) return;
   const caver = new Caver(window.klaytn);
   const unihubNFTContract = new caver.klay.Contract(
     contractABI,
@@ -331,6 +337,7 @@ export const tokenURI = async (NFT_id) => {
 };
 
 export const getBalanceOf = async (account) => {
+  if (isMobile) return;
   const caver = new Caver(window.klaytn);
   const unihubNFTContract = new caver.klay.Contract(
     contractABI,
@@ -340,6 +347,7 @@ export const getBalanceOf = async (account) => {
 };
 
 export const tokenOfOwnerByIndex = async (account, index) => {
+  if (isMobile) return;
   const caver = new Caver(window.klaytn);
   const unihubNFTContract = new caver.klay.Contract(
     contractABI,
@@ -351,12 +359,14 @@ export const tokenOfOwnerByIndex = async (account, index) => {
 };
 
 export const getLastNFTid = async (account) => {
+  if (isMobile) return;
   return await getBalanceOf(account).then(async (tokenBalance) => {
     return await tokenOfOwnerByIndex(account, tokenBalance - 1);
   });
 };
 
 export const mintNFT = async () => {
+  if (isMobile) return;
   const caver = new Caver(window.klaytn);
 
   const unihubNFTContract = new caver.klay.Contract(
