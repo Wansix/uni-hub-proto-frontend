@@ -4,9 +4,6 @@ import { useState, useEffect } from "react";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
 axios.defaults.withCredentials = true;
 
-const headers = { withCredentials: true };
-const unihubServerURL = process.env.REACT_APP_UNIHUB_SERVER_URL;
-
 export const Mymenu = () => {
   const [userBalance, setUserBalance] = useState(0);
   const [NFTList, setNFTList] = useState([]);
@@ -59,9 +56,7 @@ export const Mymenu = () => {
                 value={0}
                 defaultChecked
               ></input>
-              <img
-                src={"https://project-lion.vercel.app/images/loading.png"}
-              ></img>
+              <img src={"img/defaultCat.png"}></img>
             </label>
           </div>
         );
@@ -123,6 +118,7 @@ export const Mymenu = () => {
 
   let content = null;
   if (userInfo.profile_registered) {
+    // Update
     content = (
       <form
         onSubmit={async (event) => {
@@ -132,19 +128,37 @@ export const Mymenu = () => {
 
           console.log("프로필 수정", nickName, profileId);
 
-          unihubNFTApi.getTokenInfoJson(profileId).then((data) => {
+          if (Number(profileId) === 0) {
             let tempUserInfo = userInfo;
             tempUserInfo["name"] = nickName;
             tempUserInfo["profileNFTid"] = profileId;
 
-            tempUserInfo["profileImgUrl"] = data.image;
+            tempUserInfo["profileImgUrl"] = "img/defaultCat.png";
 
             console.log("temp", tempUserInfo);
-            unihubNFTApi.updateUserInfo(tempUserInfo);
-            localStorage.clear();
-            window.location.href = "/mymenu";
-            window.location.reload();
-          });
+            const response = await unihubNFTApi.updateUserInfo(tempUserInfo);
+            if (response) {
+              localStorage.clear();
+              window.location.href = "/mymenu";
+              window.location.reload();
+            }
+          } else {
+            unihubNFTApi.getTokenInfoJson(profileId).then(async (data) => {
+              let tempUserInfo = userInfo;
+              tempUserInfo["name"] = nickName;
+              tempUserInfo["profileNFTid"] = profileId;
+
+              tempUserInfo["profileImgUrl"] = data.image;
+
+              console.log("temp", tempUserInfo);
+              const response = await unihubNFTApi.updateUserInfo(tempUserInfo);
+              if (response) {
+                localStorage.clear();
+                window.location.href = "/mymenu";
+                window.location.reload();
+              }
+            });
+          }
         }}
       >
         <div className="myMenu-registerForm__item">{NFTList}</div>
@@ -155,17 +169,24 @@ export const Mymenu = () => {
       </form>
     );
   } else {
+    // Register
     content = (
       <form
-        onSubmit={(event) => {
+        onSubmit={async (event) => {
           event.preventDefault();
           const nickName = event.target.nickName.value;
           const profileId = event.target.tokenId.value;
 
           console.log("등록", nickName, profileId);
-          unihubNFTApi.registerUserInfo(nickName, profileId);
-          window.location.href = "/mymenu";
-          window.location.reload();
+
+          const response = await unihubNFTApi.registerUserInfo(
+            nickName,
+            profileId
+          );
+          if (response) {
+            window.location.href = "/mymenu";
+            window.location.reload();
+          }
         }}
       >
         <div className="myMenu-registerForm__item">{NFTList}</div>

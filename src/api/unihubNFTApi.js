@@ -151,7 +151,7 @@ export const updateUserInfo = async (userInfo) => {
       profile_registered: userInfo.profile_registered,
     };
 
-    axios.post(url, send_param).then((res) => {
+    return await axios.post(url, send_param).then(async (res) => {
       if (res.data.message) {
         alert(res.data.message);
       } else {
@@ -169,6 +169,8 @@ export const updateUserInfo = async (userInfo) => {
         USER_PROFILE_REGISTERED,
         userInfo.profile_registered
       );
+
+      return true;
     });
   } catch (err) {
     console.log("에러!", err);
@@ -186,16 +188,16 @@ export const registerUserInfo = async (name, profileNFTid) => {
       return;
     }
 
-    getProfileImageFromContract(function () {}, profileNFTid).then((imgUrl) => {
+    if (Number(profileNFTid) === 0) {
       const url = `${unihubServerURL}/user/registerUserInfo`;
       const send_param = {
         address: address,
         name: name,
         profileNFTid: profileNFTid,
-        profileImgUrl: imgUrl,
+        profileImgUrl: "img/defaultCat.png",
       };
 
-      axios.post(url, send_param).then((res) => {
+      return await axios.post(url, send_param).then(async (res) => {
         if (res.data.message) {
           alert(res.data.message);
         } else {
@@ -212,8 +214,40 @@ export const registerUserInfo = async (name, profileNFTid) => {
           USER_PROFILE_REGISTERED,
           res.data.list.profile_registered
         );
+        return true;
       });
-    });
+    } else {
+      return await getProfileImageFromContract(function () {},
+      profileNFTid).then(async (imgUrl) => {
+        const url = `${unihubServerURL}/user/registerUserInfo`;
+        const send_param = {
+          address: address,
+          name: name,
+          profileNFTid: profileNFTid,
+          profileImgUrl: imgUrl,
+        };
+
+        return await axios.post(url, send_param).then(async (res) => {
+          if (res.data.message) {
+            alert(res.data.message);
+          } else {
+            alert("등록실패!");
+          }
+
+          localStorage.setItem(USER_NAME, res.data.list.name);
+          localStorage.setItem(USER_ADDRESS, res.data.list.address);
+          localStorage.setItem(USER_IMAGE_URL, res.data.list.Profile_IMG_url);
+          localStorage.setItem(USER_NFT_ID, res.data.list.Profile_NFT_id);
+          localStorage.setItem(USER_SEED, res.data.list.seed);
+          localStorage.setItem(USER_CLAIM_HERB, res.data.list.claimHerb);
+          localStorage.setItem(
+            USER_PROFILE_REGISTERED,
+            res.data.list.profile_registered
+          );
+          return true;
+        });
+      });
+    }
   } catch (err) {
     console.log("에러!", err);
     return 0;
@@ -299,6 +333,8 @@ export const getProfileImageFromContract = async (
 
 export const getTokenInfoJson = async (tokenId) => {
   if (isMobile) return;
+  if (Number(tokenId) === 0) return false;
+
   return await tokenURI(tokenId).then(async (result) => {
     const url = result;
 
