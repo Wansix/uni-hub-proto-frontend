@@ -78,7 +78,7 @@ export const getUserInfoFromAccount = async (setUserInfo) => {
     const address = kaikasApi.getCurrentAccount();
 
     if (address === 0) {
-      alert("지갑을 연결 해주세요. getUserInfoFromAccount");
+      // alert("지갑을 연결 해주세요. getUserInfoFromAccount");
       return;
     }
 
@@ -115,8 +115,7 @@ export const getUserInfoFromAccount = async (setUserInfo) => {
           address: "",
           name: "",
           profileNFTid: 0,
-          profileImgUrl:
-            "https://www.gitbook.com/cdn-cgi/image/width=40,height=40,fit=contain,dpr=1,format=auto/https%3A%2F%2F1927025491-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F26RjBfFzFVOGIuZIvCnv%252Ficon%252Fd8iMGULLDXKhLrDi9c8X%252FKakaoTalk_20220714_212558110.png%3Falt%3Dmedia%26token%3D1b215d19-0cdd-4ae8-b626-cd48c5f648b1",
+          profileImgUrl: "img/defaultCat.png",
           seed: 0,
           claimHerb: 0,
           profile_registered: false,
@@ -137,7 +136,7 @@ export const updateUserInfo = async (userInfo) => {
     const address = kaikasApi.getCurrentAccount();
 
     if (address === 0) {
-      alert("지갑을 연결 해주세요. updateUserInfo");
+      // alert("지갑을 연결 해주세요. updateUserInfo");
       return;
     }
 
@@ -183,7 +182,7 @@ export const registerUserInfo = async (name, profileNFTid) => {
     const address = kaikasApi.getCurrentAccount();
 
     if (address === 0) {
-      alert("지갑을 연결 해주세요. registerUserInfo");
+      alert("지갑을 연결 해주세요.");
       return;
     }
 
