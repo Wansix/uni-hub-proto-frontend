@@ -109,7 +109,7 @@ export const Profile = () => {
         <img src={userInfo.profileImgUrl} alt="profileImg"></img>
         <div className="profile__profileMenu">
           <div className="profile__profileMenu-link">
-            <a href="/mymenu">MINT</a>
+            <a href="/Mint">MINT</a>
           </div>
           <div className="profile__profileMenu-link">
             <a href="/mymenu">PROFILE</a>

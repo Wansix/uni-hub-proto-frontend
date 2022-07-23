@@ -19,7 +19,6 @@ const Header = () => {
         <Nav.Link href="/info">정보</Nav.Link>
         <Nav.Link href="/community">자유</Nav.Link>
         <Nav.Link href="/hot">Hot</Nav.Link>
-        <Nav.Link href="/mint">Mint</Nav.Link>
       </div>
     </div>
   );
