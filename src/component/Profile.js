@@ -5,6 +5,14 @@ import * as kaikasApi from "../api/kaikasApi";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
 import { isMobile } from "react-device-detect";
 import { defaultCatUrl } from "../img.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faCommentDots,
+  faPen,
+  faSeedling,
+  faLeaf,
+} from "@fortawesome/free-solid-svg-icons";
 
 const DEFAULT_ADDRESS = "0x00";
 
@@ -98,12 +106,47 @@ export const Profile = () => {
         </div>
       </div>
       <div className="profile__profile">
-        <a href="/mymenu">profile</a>
         <img src={userInfo.profileImgUrl} alt="profileImg"></img>
+        <div className="profile__profileMenu">
+          <div className="profile__profileMenu-link">
+            <a href="/mymenu">MINT</a>
+          </div>
+          <div className="profile__profileMenu-link">
+            <a href="/mymenu">PROFILE</a>
+          </div>
+        </div>
         <div className="profile__Info">
-          <span>닉네임 : {userInfo.name}</span>
-          <span>씨앗 : {userInfo.seed}</span>
-          <span>허브 : {userInfo.claimHerb}</span>
+          <div className="profile__Info-item">
+            <span>
+              <FontAwesomeIcon icon={faUser} />
+            </span>
+            <span>닉네임 : {userInfo.name}</span>
+          </div>
+          <div className="profile__Info-item">
+            <span>
+              <FontAwesomeIcon icon={faSeedling} />
+            </span>
+            <span>씨앗 : {userInfo.seed}</span>
+          </div>
+          <div className="profile__Info-item">
+            <span>
+              <FontAwesomeIcon icon={faLeaf} />
+            </span>
+
+            <span>허브 : {userInfo.claimHerb}</span>
+          </div>
+          <div className="profile__Info-item">
+            <span>
+              <FontAwesomeIcon icon={faPen} />
+            </span>
+            <span>게시글 : 5</span>
+          </div>
+          <div className="profile__Info-item">
+            <span>
+              <FontAwesomeIcon icon={faCommentDots} />
+            </span>
+            <span>댓글 : 0</span>
+          </div>
         </div>
       </div>
     </div>
