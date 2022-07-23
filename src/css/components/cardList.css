@@ -1,0 +1,116 @@
+.card-contents {
+  /* background-color: wheat; */
+  padding: 5px 30px;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: flex-start;
+  /* width: 1000px; */
+  width: 100%;
+  background-color: wheat;
+}
+
+.cardlist-arrow {
+  position: fixed;
+  opacity: 0.4;
+  z-index: 99;
+}
+
+.cardlist-arrow:hover {
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+.card-contents__rightArrow {
+  top: 640px;
+  /* right: 210px; */
+  right: 20%;
+}
+.card-contents__leftArrow {
+  top: 640px;
+  left: 10px;
+}
+
+.card-content {
+  width: 200px;
+  /* background-color: antiquewhite; */
+  border-radius: 15px;
+  margin-right: 30px;
+}
+
+.card-content a {
+  color: black;
+  text-decoration: none;
+}
+
+.card-content a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-content__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content__top img {
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+}
+
+.card-content__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 0px;
+}
+
+.card-content__bottom-projectName {
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card-content__bottom-projectName span {
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: black solid 1px;
+  border-color: rgba(0, 0, 0, 0.2);
+  width: 90%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.card-content__bottom-price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+}
+
+/* floor price */
+.card-content__bottom-price-wrapper > span {
+  font-size: 15px;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+.card-content__bottom-price-wrapper__price {
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.card-content__bottom-price-wrapper__price img {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.card-content__bottom-price-wrapper__price span {
+  color: black;
+  font-size: 18px;
+}
