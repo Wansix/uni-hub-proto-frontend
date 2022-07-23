@@ -32,10 +32,10 @@
 .TopNFT-header__items:last-child {
   width: 30%;
 }
-
+/* 
 .TopNFT-contents {
-  /* background-color: aliceblue; */
-}
+  background-color: aliceblue;
+} */
 .TopNFT-contents__row {
   display: flex;
 }

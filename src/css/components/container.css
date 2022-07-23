@@ -1,9 +1,11 @@
 .main-container {
-  width: 100%;
+  width: 80%;
 }
 
 .right-container {
-  width: 300px;
+  position: fixed;
+  right: 0px;
+  width: 20%;
   height: 100vh;
   background-color: wheat;
 }
