@@ -250,14 +250,14 @@ const RankingBoard = () => {
       <Tabs
         defaultActiveKey="topNFT"
         id="homeTap"
-        className="mb-3"
+        className="mb-3 rankingBoard__header-tabs"
         variant="pills"
       >
         <Tab eventKey="topNFT" title="Top NFT">
           <TopNFTList></TopNFTList>
         </Tab>
-        <Tab eventKey="profile" title="Profile"></Tab>
-        <Tab eventKey="contact" title="Contact"></Tab>
+        <Tab eventKey="profile" title="ART"></Tab>
+        <Tab eventKey="contact" title="P2E"></Tab>
       </Tabs>
     </div>
   );

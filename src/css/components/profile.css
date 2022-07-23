@@ -1,5 +1,5 @@
 .wallet-connect-wrapper {
-  background-color: turquoise;
+  /* background-color: turquoise; */
   height: 8vh;
   display: flex;
 }
@@ -16,6 +16,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  opacity: 0.95;
+  white-space: nowrap;
 }
 
 .profile__profile {

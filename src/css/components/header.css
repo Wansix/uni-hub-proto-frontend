@@ -1,18 +1,21 @@
 .header {
   height: 8vh;
-  background-color: rgb(24, 202, 110);
+  /* background-color: rgba(34, 139, 34, 0.8); */
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 5px;
+  border-bottom: black solid 1px;
+  border-color: rgba(0, 0, 0, 0.07);
 }
 
 .header__home {
-  width: 220px;
-  background-color: beige;
+  /* width: 250px; */
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 0px;
+  padding-left: 10px;
+  white-space: nowrap;
 }
 
 .header__home a {
@@ -24,26 +27,32 @@
 }
 
 .header__home img {
-  margin-right: 20px;
+  margin-right: 10px;
   height: 40px;
   width: 40px;
 }
 
 .header__home h1 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 700;
   padding-top: 5px;
+  opacity: 0.8;
 }
 
 .header__menu {
-  margin-left: 10px;
+  margin-top: 10px;
+  margin-left: 0px;
   width: 100%;
-  background-color: whitesmoke;
   display: flex;
   align-items: center;
+
+  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
 .header__menu .nav-link {
-  color: black;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
   margin-left: 10px;
+  font-weight: 600;
+  white-space: nowrap;
 }

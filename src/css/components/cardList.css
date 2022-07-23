@@ -1,11 +1,36 @@
+.rankingBoard__header {
+  font-size: 40px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.rankingBoard__header-tabs {
+  padding: 5px 10px;
+  margin-left: 30px;
+}
+
 .card-contents {
   /* background-color: wheat; */
-  padding: 5px 30px;
+  padding: 0px 30px;
   overflow-x: hidden;
   display: flex;
   justify-content: flex-start;
   /* width: 1000px; */
   width: 100%;
+}
+
+.nav.nav-pills .nav-link.active {
+  background-color: forestgreen;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.nav.nav-pills .nav-link {
+  background-color: white;
+  color: forestgreen;
+  font-size: 15px;
 }
 
 .cardlist-arrow {

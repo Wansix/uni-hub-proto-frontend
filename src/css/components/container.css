@@ -7,5 +7,8 @@
   right: 0px;
   width: 20%;
   height: 100vh;
-  background-color: wheat;
+  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(33, 196, 33, 0.04);
+  border-left: black solid 0.5px;
+  border-color: rgba(33, 196, 33, 0.1);
 }

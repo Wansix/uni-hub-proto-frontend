@@ -1,9 +1,8 @@
 import * as React from "react";
 import { Reset } from "styled-reset";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
-
 import Main from "./component/Main";
 import Header from "./component/Header";
 import Profile from "./component/Profile";

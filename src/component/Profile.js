@@ -88,7 +88,7 @@ export const Profile = () => {
         <div className="wallet-connect">
           <Button
             className="wallet-connect-button"
-            variant="primary"
+            variant="success"
             onClick={connectWallet}
           >
             <span>{myWallet}</span>
