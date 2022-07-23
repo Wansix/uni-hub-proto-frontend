@@ -12,7 +12,6 @@ const accessKeyId = process.env.REACT_APP_KAS_ACCESS_KEY_ID;
 const secretAccessKey = process.env.REACT_APP_KAS_SECRET_ACCRESS_KEY;
 const endpoint = process.env.REACT_APP_ENDPOINT;
 // const contractAddress = process.env.REACT_APP_UNIHUB_NFT_CONTRACT;
-console.log("kaikas hi");
 
 // module.exports = {
 export const test = async () => {

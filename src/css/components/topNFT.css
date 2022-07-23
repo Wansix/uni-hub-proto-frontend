@@ -1,0 +1,74 @@
+.TopNFT-wrapper {
+  background-color: blanchedalmond;
+  margin-top: 10px;
+  padding: 20px 10px;
+}
+.TopNFT-header {
+  padding: 10px 0px;
+
+  border-bottom: black solid 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.TopNFT-header__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TopNFT-header__items:first-child {
+  width: 10%;
+}
+.TopNFT-header__items:nth-child(2) {
+  width: 30%;
+}
+.TopNFT-header__items:nth-child(3) {
+  width: 30%;
+}
+.TopNFT-header__items:last-child {
+  width: 30%;
+}
+
+.TopNFT-contents {
+  /* background-color: aliceblue; */
+}
+.TopNFT-contents__row {
+  display: flex;
+}
+.TopNFT-contents__row-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+
+  border-bottom: black solid 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.TopNFT-contents__row-content:nth-child(2) {
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+.TopNFT-contents__row-content img {
+  height: 50px;
+  width: 50px;
+  border-radius: 20%;
+  margin-right: 10px;
+}
+
+.TopNFT-contents__row-content:first-child {
+  width: 10%;
+}
+.TopNFT-contents__row-content:nth-child(2) {
+  width: 30%;
+}
+.TopNFT-contents__row-content:nth-child(3) {
+  width: 30%;
+}
+.TopNFT-contents__row-content:last-child {
+  width: 30%;
+}
