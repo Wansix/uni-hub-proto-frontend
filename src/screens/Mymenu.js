@@ -115,6 +115,7 @@ export const Mymenu = () => {
   useEffect(() => {
     getUserInfo(setUserInfo);
     getNFTList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   let content = null;

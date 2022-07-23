@@ -42,6 +42,7 @@ function Content() {
 
   useEffect(() => {
     getPostContent();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

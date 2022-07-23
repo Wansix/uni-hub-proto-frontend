@@ -45,6 +45,7 @@ export const Profile = () => {
     });
 
     kaikasApi.changedAccount(checkChangedAccount);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const test = async () => {
