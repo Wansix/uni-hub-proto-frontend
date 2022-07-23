@@ -7,8 +7,6 @@ import axios from "axios";
 import { defaultCatUrl } from "../img.js";
 axios.defaults.withCredentials = true;
 
-// const kaikasApi = require("../api/kaikasApi.js");
-// const unihubNFTApi = require("../api/unihubNFTApi.js");
 const headers = { withCredentials: true };
 
 const unihubServerURL = process.env.REACT_APP_UNIHUB_SERVER_URL;

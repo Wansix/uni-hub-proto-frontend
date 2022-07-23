@@ -1,5 +1,7 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import * as React from "react";
+import { Reset } from "styled-reset";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import Main from "./component/Main";
@@ -8,17 +10,20 @@ import Profile from "./component/Profile";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <div className="main-container">
-          <Header></Header>
-          <Main></Main>
+    <React.Fragment>
+      <Reset />
+      <Router>
+        <div className="App">
+          <div className="main-container">
+            <Header></Header>
+            <Main></Main>
+          </div>
+          <div className="right-container">
+            <Profile></Profile>
+          </div>
         </div>
-        <div className="right-container">
-          <Profile></Profile>
-        </div>
-      </div>
-    </Router>
+      </Router>
+    </React.Fragment>
   );
 }
 
