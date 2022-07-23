@@ -75,15 +75,22 @@ export const Profile = () => {
       setWalletConnect(viewAccount);
       setMyWallet("내지갑");
       setWalletConnectState(true);
+
+      var target = document.getElementsByClassName("wallet-connect-button");
+      target[0].style.justifyContent = "space-between";
       // setMyViewAddress(viewAccount);
     }
   };
 
   return (
     <div className="profile">
-      <div className="wallet-connect">
-        <div>
-          <Button variant="primary" onClick={connectWallet}>
+      <div className="wallet-connect-wrapper">
+        <div className="wallet-connect">
+          <Button
+            className="wallet-connect-button"
+            variant="primary"
+            onClick={connectWallet}
+          >
             <span>{myWallet}</span>
             <span>{walletConnect}</span>
           </Button>

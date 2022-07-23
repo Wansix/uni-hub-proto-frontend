@@ -1,9 +1,21 @@
-.wallet-connect {
+.wallet-connect-wrapper {
   background-color: turquoise;
-  height: 100px;
+  height: 8vh;
   display: flex;
 }
+.wallet-connect {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+}
+
 .wallet-connect button {
+  margin: 0px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .profile__profile {
