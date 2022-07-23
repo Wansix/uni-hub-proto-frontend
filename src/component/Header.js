@@ -14,12 +14,12 @@ const Header = () => {
         </a>
       </div>
       <div className="header__menu">
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/community">커뮤니티</Nav.Link>
-        <Nav.Link href="/nftInfo">NFT정보</Nav.Link>
-        <Nav.Link href="/mintInfo">mintComing</Nav.Link>
+        <Nav.Link href="/nftInfo">민팅완료</Nav.Link>
+        <Nav.Link href="/mintInfo">민팅예정</Nav.Link>
+        <Nav.Link href="/community">게시판</Nav.Link>
+        <Nav.Link href="/news">뉴스</Nav.Link>
+        <Nav.Link href="/notice">공지사항</Nav.Link>
         <Nav.Link href="/mint">Mint</Nav.Link>
-        <Nav.Link href="/mymenu">myMenu</Nav.Link>
       </div>
     </div>
   );

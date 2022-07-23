@@ -3,6 +3,8 @@
   height: 100px;
   display: flex;
 }
+.wallet-connect button {
+}
 
 .profile__profile {
   margin-top: 10px;
