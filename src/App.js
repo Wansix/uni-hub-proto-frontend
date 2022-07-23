@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Main from "./component/Main";
 import Header from "./component/Header";
 import Profile from "./component/Profile";
+import Advertisement from "./component/Advertisement";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           </div>
           <div className="right-container">
             <Profile></Profile>
+            <Advertisement></Advertisement>
           </div>
         </div>
       </Router>

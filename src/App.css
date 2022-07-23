@@ -6,6 +6,7 @@
 @import "./css/components/postingContent.css";
 @import "./css/components/topNFT.css";
 @import "./css/components/cardList.css";
+@import "./css/components/advertisement.css";
 
 /* Screens */
 @import "./css/screens/main.css";

@@ -1,0 +1,11 @@
+.advertisement-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.advertisement-wrapper img {
+  width: 180px;
+  height: 300px;
+  border-radius: 20px;
+}

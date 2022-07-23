@@ -148,7 +148,7 @@ export const Profile = () => {
             <span>댓글 : 0</span>
           </div>
         </div>
-      </div>
+      </div>      
     </div>
   );
 };
