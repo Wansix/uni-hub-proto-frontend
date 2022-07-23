@@ -57,7 +57,7 @@ function Content() {
         <div className="posting-wrapper__header-info">
           <div className="posting-wrapper__header-info__profile">
             <div>
-              <img src={postData.profileImgUrl}></img>
+              <img src={postData.profileImgUrl} alt="profileImg"></img>
             </div>
             <div>
               <span>{postData.nickName}</span>

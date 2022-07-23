@@ -24,7 +24,7 @@ export const Profile = () => {
     if (isMobile) return;
     console.log("changedAccount");
     const address = localStorage.getItem("userADDRESS");
-    if (window.klaytn.selectedAddress != address) {
+    if (window.klaytn.selectedAddress !== address) {
       localStorage.clear();
       kaikasApi.autoConnectWallet(connectWallet);
       unihubNFTApi.getUserInfoFromAccount(setUserInfo);
@@ -38,7 +38,7 @@ export const Profile = () => {
     // console.log("useEffect");
     const address = localStorage.getItem("userADDRESS");
     kaikasApi.autoConnectWallet(connectWallet).then(() => {
-      if (window.klaytn.selectedAddress != address) {
+      if (window.klaytn.selectedAddress !== address) {
         localStorage.clear();
       }
       unihubNFTApi.getUserInfo(setUserInfo);
@@ -75,7 +75,7 @@ export const Profile = () => {
         <span>{myViewAddress}</span>
       </div>
       <div className="profile__profile">
-        <img src={userInfo.profileImgUrl}></img>
+        <img src={userInfo.profileImgUrl} alt="profileImg"></img>
         <div className="profile__Info">
           <span>닉네임 : {userInfo.name}</span>
           <span>씨앗 : {userInfo.seed}</span>

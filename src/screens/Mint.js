@@ -29,25 +29,23 @@ export const Mint = () => {
     }
 
     unihubNFTApi.mintNFT().then(async () => {
-      const mintingId = await unihubNFTApi
-        .getLastNFTid(address)
-        .then((mintId) => {
-          console.log("mintingId 내부:", mintId);
-          unihubNFTApi.getProfileImageFromContract(setImgUrl, mintId);
-          unihubNFTApi.getNFTInfo(
-            setProjectName,
-            setProjectDescription,
-            setProjectAttributes,
-            mintId
-          );
-        });
+      await unihubNFTApi.getLastNFTid(address).then((mintId) => {
+        console.log("mintingId 내부:", mintId);
+        unihubNFTApi.getProfileImageFromContract(setImgUrl, mintId);
+        unihubNFTApi.getNFTInfo(
+          setProjectName,
+          setProjectDescription,
+          setProjectAttributes,
+          mintId
+        );
+      });
     });
   };
 
   return (
     <div className="mint-wrapper">
       <div className="mint-left-container">
-        <img src={imgUrl}></img>
+        <img src={imgUrl} alt="mintImg"></img>
       </div>
       <div className="mint-right-container">
         <div className="mint-price">

@@ -13,7 +13,7 @@ const TopNFT = () => {
       </div>
       <div className="TopNFT-content">
         <span>1</span>
-        <img src="#"></img>
+        <img src="#" alt="topNFT"></img>
         <span>유니허브</span>
         <span>270 klay</span>
       </div>

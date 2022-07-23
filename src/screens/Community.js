@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
-import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 axios.defaults.withCredentials = true;
@@ -58,7 +57,7 @@ const Board = () => {
                 <a href={contentUrl}>{item.title}</a>
               </div>
               <div className="board__content">
-                <img src={item.profileImgUrl}></img>
+                <img src={item.profileImgUrl} alt="profileImg"></img>
                 <span>{item.nickName}</span>
               </div>
 

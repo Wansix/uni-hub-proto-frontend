@@ -6,12 +6,12 @@ dotenv.config();
 
 const klaytn = window.klaytn;
 const chainIdCypress = process.env.REACT_APP_CHAIN_ID_CYPRESS;
-const chainIdBaobab = process.env.REACT_APP_CHAIN_ID_BAOBAB;
+// const chainIdBaobab = process.env.REACT_APP_CHAIN_ID_BAOBAB;
 
 const accessKeyId = process.env.REACT_APP_KAS_ACCESS_KEY_ID;
 const secretAccessKey = process.env.REACT_APP_KAS_SECRET_ACCRESS_KEY;
 const endpoint = process.env.REACT_APP_ENDPOINT;
-const contractAddress = process.env.REACT_APP_UNIHUB_NFT_CONTRACT;
+// const contractAddress = process.env.REACT_APP_UNIHUB_NFT_CONTRACT;
 console.log("kaikas hi");
 
 // module.exports = {

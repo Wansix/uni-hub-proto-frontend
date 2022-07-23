@@ -57,7 +57,7 @@ export const Mymenu = () => {
                 value={0}
                 defaultChecked
               ></input>
-              <img src={defaultCatUrl}></img>
+              <img src={defaultCatUrl} alt="Default"></img>
             </label>
           </div>
         );
@@ -75,7 +75,7 @@ export const Mymenu = () => {
           await unihubNFTApi.getTokenInfoJson(nftList[index]).then((data) => {
             // console.log("json data", data);
             // console.log("json data", data["name"]);
-            if (selectedTokenId == nftList[index]) {
+            if (Number(selectedTokenId) === Number(nftList[index])) {
               list.push(
                 <div key={index + 1} className="NFTList__item">
                   <label>
@@ -85,7 +85,7 @@ export const Mymenu = () => {
                       value={nftList[index]}
                       defaultChecked
                     ></input>
-                    <img src={data.image}></img>
+                    <img src={data.image} alt={nftList[index]}></img>
                   </label>
                 </div>
               );
@@ -98,7 +98,7 @@ export const Mymenu = () => {
                       name="tokenId"
                       value={nftList[index]}
                     ></input>
-                    <img src={data.image}></img>
+                    <img src={data.image} alt={nftList[index]}></img>
                   </label>
                 </div>
               );

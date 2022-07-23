@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import Navbar from "react-bootstrap/Navbar";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 import { defaultCatUrl } from "../img.js";
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
     <div className="header">
       <div className="header__home">
         <a href="/">
-          <img src={defaultCatUrl}></img>
+          <img src={defaultCatUrl} alt="cat"></img>
           <h1>Uni-hub</h1>
         </a>
       </div>

@@ -344,8 +344,8 @@ export const getTokenInfoJson = async (tokenId) => {
         if (res.status === 200) {
           return res.data;
         } else {
-          return false;
           console.log("실패");
+          return false;
         }
       });
     } catch (err) {
