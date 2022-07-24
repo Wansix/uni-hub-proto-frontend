@@ -94,23 +94,37 @@ export const Profile = () => {
     <div className="profile">
       <div className="wallet-connect-wrapper">
         <div className="wallet-connect">
-          <Button
+          <div className="mint-link">
+            <a href="/Mint">MINT</a>
+          </div>
+          {/* <Button
             className="wallet-connect-button"
             variant="success"
             onClick={connectWallet}
           >
             <span>{myWallet}</span>
             <span>{walletConnect}</span>
-          </Button>
+          </Button> */}
           {/* <button onClick={test}>test</button> */}
         </div>
       </div>
       <div className="profile__profile">
         <img src={userInfo.profileImgUrl} alt="profileImg"></img>
         <div className="profile__profileMenu">
-          <div className="profile__profileMenu-link">
+          {/* <div className="profile__profileMenu-link">
             <a href="/Mint">MINT</a>
+          </div> */}
+          <div className="profile__profileMenu-link">
+            <Button
+              className="wallet-connect-button"
+              variant="success"
+              onClick={connectWallet}
+            >
+              <span>{myWallet}</span>
+              <span>{walletConnect}</span>
+            </Button>
           </div>
+
           <div className="profile__profileMenu-link">
             <a href="/mymenu">PROFILE</a>
           </div>
@@ -148,7 +162,7 @@ export const Profile = () => {
             <span>댓글 : 0</span>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
   );
 };
