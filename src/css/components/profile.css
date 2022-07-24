@@ -151,6 +151,20 @@
 .profile__Info-item span:first-child {
   margin-right: 10px;
   color: forestgreen;
+  /* background-color: gold; */
+  /* background-color: aquamarine; */
+  width: 20px;
+  height: 20px;
+  padding-top: 2px;
+  /* padding-left: 3px; */
+}
+.profile__Info-item span:first-child img {
+  width: 20px;
+  height: 20px;
+  /* background-color: tomato; */
+  position: relative;
+  left: -3px;
+  top: -2px;
 }
 
 .profile__Info-item span:last-child {

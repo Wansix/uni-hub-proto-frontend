@@ -138,13 +138,15 @@ export const Profile = () => {
           </div>
           <div className="profile__Info-item">
             <span>
-              <FontAwesomeIcon icon={faSeedling} />
+              <img src="img/seed.png"></img>
+              {/* <FontAwesomeIcon icon={faSeedling} /> */}
             </span>
             <span>씨앗 : {userInfo.seed}</span>
           </div>
           <div className="profile__Info-item">
             <span>
-              <FontAwesomeIcon icon={faLeaf} />
+              {/* <FontAwesomeIcon icon={faLeaf} /> */}
+              <img src="img/token.png"></img>
             </span>
 
             <span>허브 : {userInfo.claimHerb}</span>
