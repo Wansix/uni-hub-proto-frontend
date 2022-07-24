@@ -9,6 +9,7 @@ const Header = () => {
     <div className="header">
       <div className="header__home">
         <a href="/">
+          <img src="img/favicon.png" alt="icon"></img>
           <h1>UNI-HUB</h1>
         </a>
       </div>

@@ -35,7 +35,8 @@
 .header__home h1 {
   font-size: 35px;
   font-weight: 700;
-  padding-top: 5px;
+  /* padding-top: 5px; */
+  padding-bottom: 4px;
   opacity: 0.8;
 }
 
