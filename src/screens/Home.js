@@ -254,9 +254,9 @@ const RankingBoard = () => {
         <Tab eventKey="topNFT" title="Top NFT">
           <TopNFTList></TopNFTList>
         </Tab>
-        <Tab eventKey="profile" title="ART"></Tab>
-        <Tab eventKey="contact" title="P2E"></Tab>
-        <Tab eventKey="contact" title="Collectibles"></Tab>
+        <Tab eventKey="ART" title="ART"></Tab>
+        <Tab eventKey="P2E" title="P2E"></Tab>
+        <Tab eventKey="Collectibles" title="Collectibles"></Tab>
       </Tabs>
     </div>
   );
