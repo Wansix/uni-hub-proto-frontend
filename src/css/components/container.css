@@ -1,5 +1,6 @@
 .main-container {
   width: 80%;
+  overflow-x: hidden;
 }
 
 .right-container {

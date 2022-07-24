@@ -266,7 +266,11 @@ const Home = () => {
   console.log("current width", window.innerWidth);
   return (
     <div className="home-wrapper">
-      <div className="home-wrapper__header"></div>
+      <div className="home-wrapper__header">
+        <div className="home-wrapper__header-ad">
+          <img src="img/mainAd.png"></img>
+        </div>
+      </div>
       <RankingBoard></RankingBoard>
     </div>
   );
