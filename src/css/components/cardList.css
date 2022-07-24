@@ -1,3 +1,14 @@
+.rankingBoard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.rankingBoard-mingtingVoteBoard {
+  width: 100%;
+}
+
 .rankingBoard__header {
   font-size: 40px;
   padding: 10px 20px;
@@ -22,6 +33,11 @@
   width: 100%;
 }
 
+.card-contents-wrap {
+  flex-wrap: wrap;
+
+  /* background-color: tomato; */
+}
 .nav.nav-pills .nav-link.active {
   background-color: forestgreen;
   color: white;
@@ -60,9 +76,14 @@
   /* background-color: antiquewhite; */
   border-radius: 15px;
   margin-right: 30px;
+  margin-bottom: 30px;
   /* border: black solid 1px; */
   border-color: rgba(0, 0, 0, 0.12);
   box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-content:last-child {
+  margin-right: 0px;
 }
 
 .card-content a {
@@ -141,4 +162,78 @@
 .card-content__bottom-price-wrapper__price span {
   color: black;
   font-size: 18px;
+}
+
+.card-content__bottom-mintingInfo {
+  /* background-color: tomato; */
+  /* display: flex;
+
+  justify-content: space-between;
+  align-items: center; */
+  padding: 0px 10px;
+  width: 200px;
+}
+
+.card-content__bottom-mintingInfo-mingtingDate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+
+/* 민팅 예정 */
+.card-content__bottom-mintingInfo-mingtingDate span:first-child {
+  font-size: 14px;
+  opacity: 0.5;
+  margin-bottom: 5px;
+}
+/* 민팅예정 날짜 */
+.card-content__bottom-mintingInfo-mingtingDate span:last-child {
+  font-size: 17px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.card-content__bottom-mintingInfo-voteInfo {
+  display: flex;
+  justify-content: center;
+}
+.card-content__bottom-mintingInfo-vote {
+  margin: 0px 5px;
+  margin-top: 10px;
+  background-color: forestgreen;
+  padding: 10px 3px;
+  display: flex;
+  border-radius: 20px;
+  width: 100px;
+  justify-content: flex-start;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.card-content__bottom-mintingInfo-vote__div:first-child {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: tomato; */
+}
+
+.card-content__bottom-mintingInfo-vote__div:last-child {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  /* background-color: wheat; */
+  padding-right: 10px;
+}
+
+.card-content__bottom-mintingInfo-vote__div span {
+  color: white;
+}
+
+.card-content__bottom-mintingInfo-vote__div span:first-child {
+  margin-left: 5px;
+}
+
+.vote-display {
+  visibility: hidden;
 }

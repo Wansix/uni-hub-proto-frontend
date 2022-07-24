@@ -192,8 +192,6 @@ const TopNFTList = () => {
     },
   ]);
   const [currentPx, setCurrentPx] = useState(0);
-  const [rightScrollpx, setRightScrollpx] = useState(movePx);
-  const [leftScrollpx, setLeftScrollpx] = useState(movePx);
 
   const cardListRightScroll = (event) => {
     const viewListPx = window.innerWidth * 0.8;
