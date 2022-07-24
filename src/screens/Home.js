@@ -256,6 +256,7 @@ const RankingBoard = () => {
         </Tab>
         <Tab eventKey="profile" title="ART"></Tab>
         <Tab eventKey="contact" title="P2E"></Tab>
+        <Tab eventKey="contact" title="Collectibles"></Tab>
       </Tabs>
     </div>
   );
