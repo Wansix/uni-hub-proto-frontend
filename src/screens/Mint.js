@@ -6,9 +6,7 @@ import * as kaikasApi from "../api/kaikasApi";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
 
 export const Mint = () => {
-  const [imgUrl, setImgUrl] = useState(
-    "https://project-lion.vercel.app/images/loading.png"
-  );
+  const [imgUrl, setImgUrl] = useState("img/randomNFT.png");
   const [projectName, setProjectName] = useState("");
   const [projectDescription, setProjectDescription] = useState("");
   const [projectAttributes, setProjectAttributes] = useState({
