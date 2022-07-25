@@ -1,0 +1,20 @@
+.writeBoard-wrapper {
+  padding: 20px 10px;
+}
+
+.writeBoard-wrapper input {
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.writeBoard-submit-wrapper {
+  margin: 20px 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.writeBoard-submit {
+  border: none;
+  padding: 10px 20px;
+}

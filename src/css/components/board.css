@@ -1,11 +1,34 @@
+.communityBoard-wrapper {
+  padding: 10px 20px;
+}
+
 .communityBoard-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 5px 0px;
+}
+
+.communityBoard-header span {
+  font-size: 25px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.communityBoard-header a {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: forestgreen;
+  opacity: 0.9;
+  border-radius: 5px;
+  position: relative;
+  top: 6px;
 }
 
 .board {
-  background-color: wheat;
-  margin: 10px 10px;
+  /* background-color: wheat; */
+  margin: 10px 0px;
   padding: 20px 0px;
 }
 
@@ -14,7 +37,7 @@
   padding: 3px 0px;
 
   width: 100%;
-  background-color: rgba(135, 233, 132, 0.253);
+  background-color: rgba(135, 233, 132, 0.1);
   align-items: center;
   border-bottom: black solid 1px;
   border-color: rgba(0, 0, 0, 0.2);

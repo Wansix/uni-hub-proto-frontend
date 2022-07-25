@@ -85,9 +85,7 @@ export const WriteBoard = () => {
   };
 
   return (
-    <div>
-      <h2>글쓰기</h2>
-
+    <div className="writeBoard-wrapper">
       <input
         type="text"
         placeholder="제목"
@@ -95,22 +93,21 @@ export const WriteBoard = () => {
         name="title"
       ></input>
       <CKEditor
+        className="writeBoardEditor"
+        name="communityEditor"
         onChange={(event) => {
           const data = event.editor.getData();
           setContent(data);
         }}
       />
-      <button
-        onClick={
-          writeBoard
-          //   () => {
-          //   console.log("title", title);
-          //   console.log("content", content);
-          // }
-        }
-      >
-        제출
-      </button>
+      <div className="writeBoard-submit-wrapper">
+        <button
+          onClick={writeBoard}
+          className="writeBoard-submit unihub-button"
+        >
+          제출
+        </button>
+      </div>
     </div>
   );
 };

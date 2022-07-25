@@ -82,7 +82,7 @@ const Board = () => {
 
 export const Community = () => {
   return (
-    <div>
+    <div className="communityBoard-wrapper">
       <div className="communityBoard-header">
         <span>Community</span>
 
