@@ -413,7 +413,7 @@ export const mintNFT = async () => {
     contractAddress
   );
   const abi = unihubNFTContract.methods.mintNFT().encodeABI();
-  const mintPrice = 2; // 단위 : klay
+  const mintPrice = 100; // 단위 : mklay
   return await kaikasApi.executeContract(contractAddress, mintPrice, abi);
 };
 // };

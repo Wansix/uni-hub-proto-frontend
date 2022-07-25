@@ -184,7 +184,7 @@ export const executeContract = async (_to, _value, abi) => {
       to: _to,
       data: abi,
       gas: 8000000,
-      value: caver.utils.toPeb(_value, "KLAY"),
+      value: caver.utils.toPeb(_value, "mKLAY"),
     })
     .once("transactionHash", (transactionHash) => {
       console.log("txHash", transactionHash);
