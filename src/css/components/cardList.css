@@ -50,27 +50,6 @@
   font-size: 15px;
 }
 
-.cardlist-arrow {
-  position: fixed;
-  opacity: 0.4;
-  z-index: 99;
-}
-
-.cardlist-arrow:hover {
-  cursor: pointer;
-  opacity: 0.2;
-}
-
-.card-contents__rightArrow {
-  top: 640px;
-  /* right: 210px; */
-  right: 20%;
-}
-.card-contents__leftArrow {
-  top: 640px;
-  left: 10px;
-}
-
 .card-content {
   width: 200px;
   /* background-color: antiquewhite; */

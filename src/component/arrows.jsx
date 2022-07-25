@@ -1,7 +1,11 @@
 import React from "react";
 
 import { VisibilityContext } from "react-horizontal-scrolling-menu";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleArrowRight,
+  faCircleArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
 function Arrow({ children, disabled, onClick }) {
   return (
     <button
@@ -13,9 +17,10 @@ function Arrow({ children, disabled, onClick }) {
         flexDirection: "column",
         justifyContent: "center",
         right: "1%",
-        // opacity: disabled ? "0" : "1",
-        // userSelect: "none",
+        opacity: disabled ? "0" : "0.35",
+        userSelect: "none",
       }}
+      className="arrow-button"
     >
       {children}
     </button>
@@ -42,7 +47,7 @@ export function LeftArrow() {
 
   return (
     <Arrow disabled={disabled} onClick={() => scrollPrev()}>
-      Left
+      <FontAwesomeIcon icon={faCircleArrowLeft} size="3x" />
     </Arrow>
   );
 }
@@ -63,7 +68,7 @@ export function RightArrow() {
 
   return (
     <Arrow disabled={disabled} onClick={() => scrollNext()}>
-      Right
+      <FontAwesomeIcon icon={faCircleArrowRight} size="3x" />
     </Arrow>
   );
 }

@@ -2,11 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleArrowRight,
-  faCircleArrowLeft,
-} from "@fortawesome/free-solid-svg-icons";
+
 import { TopNFTProjectLists } from "../constansts/topNFTlists.js";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import { LeftArrow, RightArrow } from "../component/arrows.jsx";

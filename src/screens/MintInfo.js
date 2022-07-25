@@ -161,18 +161,6 @@ const MintInfoList = () => {
   ]);
   return (
     <div className="card-contents card-contents-wrap">
-      {/* <div
-        className="card-contents__rightArrow cardlist-arrow"
-        onClick={cardListRightScroll}
-      >
-        <FontAwesomeIcon icon={faCircleArrowRight} size="3x" />
-      </div>
-      <div
-        className="card-contents__leftArrow cardlist-arrow"
-        onClick={cardListLeftScroll}
-      >
-        <FontAwesomeIcon icon={faCircleArrowLeft} size="3x" />
-      </div> */}
       <CardContents cardList={NFTProjectList}></CardContents>
     </div>
   );
