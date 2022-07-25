@@ -4,7 +4,7 @@
 
 .myMenu-registerForm {
   padding: 20px 40px;
-  background-color: wheat;
+  /* background-color: wheat; */
 }
 
 .myMenu-registerForm__header {
@@ -12,6 +12,20 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 0px;
+}
+
+.myMenu-registerForm__header h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.myMenu-registerForm__header h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.myMenu-registerForm__body {
+  /* background-color: antiquewhite; */
+  padding: 20px 30px;
 }
 
 .NFTList__item label input {
@@ -26,17 +40,37 @@
 }
 
 .NFTList__item img {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   border-radius: 20%;
-  margin: 10px;
+  margin: 20px;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.5);
 }
 
 .NFTList__item [type="radio"]:checked + img {
-  outline: 2px solid #f00;
+  outline: 7px solid forestgreen;
 }
 
 .myMenu-registerForm__item {
   display: flex;
   flex-wrap: wrap;
+
+  margin-bottom: 50px;
+}
+.myMenu-registerForm__item:last-child {
+  justify-content: center;
+}
+
+.myMenu-registerForm__item input {
+  /* border: none; */
+  padding: 15px 10px;
+  font-size: 18px;
+}
+
+.myMenu-registerForm__item .registerButton {
+  /* border-radius: 10px; */
+  background-color: forestgreen;
+  border: none;
+  color: white;
+  width: 80px;
 }

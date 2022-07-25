@@ -164,8 +164,8 @@ export const Mymenu = () => {
         <div className="myMenu-registerForm__item">{NFTList}</div>
         <div className="myMenu-registerForm__item">
           <input type="text" name="nickName" defaultValue={userInfo.name} />
+          <input type="submit" value="수정" className="registerButton"></input>
         </div>
-        <input type="submit" value="수정"></input>
       </form>
     );
   } else {
@@ -192,9 +192,8 @@ export const Mymenu = () => {
         <div className="myMenu-registerForm__item">{NFTList}</div>
         <div className="myMenu-registerForm__item">
           <input type="text" name="nickName" placeholder="닉네임" required />
+          <input type="submit" value="등록" className="registerButton"></input>
         </div>
-
-        <input type="submit" value="등록"></input>
       </form>
     );
   }
@@ -203,10 +202,10 @@ export const Mymenu = () => {
     <div className="myMenu">
       <div className="myMenu-registerForm">
         <div className="myMenu-registerForm__header">
-          <div>My NFT </div>
-          <div>NFT 개수 {userBalance}</div>
+          <h1>My NFT </h1>
+          <h2>NFT 개수 {userBalance}</h2>
         </div>
-        {content}
+        <div className="myMenu-registerForm__body">{content}</div>
       </div>
     </div>
   );
