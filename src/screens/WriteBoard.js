@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import * as kaikasApi from "../api/kaikasApi";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
 import axios from "axios";
-import { defaultCatUrl } from "../img.js";
+import { defaultCatUrl } from "../constansts/img.js";
 axios.defaults.withCredentials = true;
 
 const headers = { withCredentials: true };

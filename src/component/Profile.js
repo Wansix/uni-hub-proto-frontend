@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import * as kaikasApi from "../api/kaikasApi";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
 import { isMobile } from "react-device-detect";
-import { defaultCatUrl } from "../img.js";
+import { defaultCatUrl } from "../constansts/img.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,

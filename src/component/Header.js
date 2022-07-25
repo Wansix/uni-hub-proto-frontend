@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 // import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
-import { defaultCatUrl } from "../img.js";
+import { defaultCatUrl } from "../constansts/img.js";
 
 const Header = () => {
   return (

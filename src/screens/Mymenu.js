@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
-import { defaultCatUrl } from "../img.js";
+import { defaultCatUrl } from "../constansts/img.js";
 axios.defaults.withCredentials = true;
 
 export const Mymenu = () => {
@@ -73,8 +73,6 @@ export const Mymenu = () => {
 
         for (let index = 0; index < nftList.length; index++) {
           await unihubNFTApi.getTokenInfoJson(nftList[index]).then((data) => {
-            // console.log("json data", data);
-            // console.log("json data", data["name"]);
             if (Number(selectedTokenId) === Number(nftList[index])) {
               list.push(
                 <div key={index + 1} className="NFTList__item">

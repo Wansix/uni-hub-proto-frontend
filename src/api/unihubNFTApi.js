@@ -3,7 +3,7 @@ import contractABI from "../abi/mintNFT.json";
 import axios from "axios";
 import * as kaikasApi from "./kaikasApi";
 import { isMobile } from "react-device-detect";
-import { defaultCatUrl } from "../img.js";
+import { defaultCatUrl } from "../constansts/img.js";
 
 import dotenv from "dotenv";
 dotenv.config();

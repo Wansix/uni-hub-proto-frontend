@@ -7,6 +7,7 @@
 @import "./css/components/topNFT.css";
 @import "./css/components/cardList.css";
 @import "./css/components/advertisement.css";
+@import "./css/components/scrollBar.css";
 
 /* Screens */
 @import "./css/screens/main.css";
