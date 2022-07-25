@@ -1,9 +1,11 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import * as kaikasApi from "../api/kaikasApi";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
+
+const MAX_SUPPLY = 49;
 
 export const Mint = () => {
   const [isLoading, setLoading] = useState(false);
@@ -21,6 +23,7 @@ export const Mint = () => {
     Background: "",
     Word: "",
   });
+  const [remainingSupply, setRemainingSupply] = useState(0);
 
   const mintNFT = async () => {
     console.log("mintNFT!!");
@@ -54,6 +57,19 @@ export const Mint = () => {
     });
   };
 
+  useEffect(() => {
+    const address = kaikasApi.getCurrentAccount();
+    if (address === 0) {
+      alert("지갑을 연결 해주세요.");
+      return;
+    }
+    unihubNFTApi.getLastNFTid(address).then(async (mintId) => {
+      console.log("mint Id ", mintId);
+      const remaining = MAX_SUPPLY - mintId;
+      setRemainingSupply(remaining);
+    });
+  }, []);
+
   return (
     <div className="mint-wrapper">
       <div className="mint-wrapper-header">
@@ -83,7 +99,7 @@ export const Mint = () => {
         <div className="mintingInfo">
           <div className="mintingRemaining">
             <span>NFT 잔여수량</span>
-            <span>50</span>
+            <span>{remainingSupply}</span>
           </div>
           <div className="mintingPrice">
             <span>가격</span>
