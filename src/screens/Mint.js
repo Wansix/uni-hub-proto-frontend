@@ -24,7 +24,7 @@ export const Mint = () => {
     Word: "",
   });
   const [remainingSupply, setRemainingSupply] = useState(0);
-
+  // const [bb, setbb] = useState(0);
   const mintNFT = async () => {
     console.log("mintNFT!!");
 
@@ -35,7 +35,7 @@ export const Mint = () => {
     }
 
     setLoading(true);
-
+    document.getElementById("mintingPageImg").classList.add("mintingAniation");
     unihubNFTApi.mintNFT().then(async () => {
       await unihubNFTApi.getLastNFTid(address).then(async (mintId) => {
         console.log("mintingId 내부:", mintId);
@@ -50,6 +50,9 @@ export const Mint = () => {
                 mintId
               )
               .then(() => {
+                document
+                  .getElementById("mintingPageImg")
+                  .classList.remove("mintingAniation");
                 setLoading(false);
               });
           });
@@ -79,7 +82,7 @@ export const Mint = () => {
 
       <div className="mintingNFTInfo">
         <div className="mintingNFTInfo__left-container">
-          <img src={imgUrl} alt="mintImg"></img>
+          <img src={imgUrl} alt="mintImg" id="mintingPageImg"></img>
         </div>
         <div className="mintingNFTInfo__right-container">
           <div className="mintingNFTInfo__right-container__info">

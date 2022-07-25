@@ -196,3 +196,19 @@
   font-size: 25px;
   font-weight: 700;
 }
+
+@keyframes mintingAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.mintingAniation {
+  animation: mintingAnimation 3s linear infinite;
+}
