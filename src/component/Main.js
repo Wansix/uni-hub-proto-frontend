@@ -7,6 +7,7 @@ import CommunityDetail from "../screens/CommunityDetail";
 import Mint from "../screens/Mint";
 import Mymenu from "../screens/Mymenu";
 import MintInfo from "../screens/MintInfo";
+import MintedProjects from "../screens/MintedProjects";
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Mint" element={<Mint />} />
+        <Route path="/MintedProjects" element={<MintedProjects />} />
         <Route path="/MintInfo" element={<MintInfo />} />
         <Route path="/Mymenu" element={<Mymenu />} />
         <Route path="/Community" element={<Community />} />

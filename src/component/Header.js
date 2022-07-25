@@ -17,7 +17,7 @@ const Header = () => {
         </a>
       </div>
       <div className="header__menu">
-        <Nav.Link href="/nftInfo">민팅완료</Nav.Link>
+        <Nav.Link href="/mintedProjects">민팅완료</Nav.Link>
         <Nav.Link href="/mintInfo">민팅예정</Nav.Link>
         <Nav.Link href="/info">정보</Nav.Link>
         <Nav.Link href="/community">자유</Nav.Link>

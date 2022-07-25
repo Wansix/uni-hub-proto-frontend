@@ -9,9 +9,7 @@ const CardContents = (props) => {
 
   const clickVote = (event) => {
     const parentNode = event.currentTarget.parentNode;
-    console.log("parent", parentNode);
-    parentNode.classList.remove("vote-button-opacity-low");
-    // parentNode.style.opacity = 0.9;
+    parentNode.style.opacity = 0.9;
     const childNodes = parentNode.childNodes;
 
     console.log(parentNode.id);
@@ -19,12 +17,12 @@ const CardContents = (props) => {
     console.log(props.cardList[id]);
     console.log(parentNode);
 
-    const nodes = parentNode.querySelectorAll(".vote-hidden");
-    nodes[0].classList.remove("vote-hidden");
-    nodes[1].classList.remove("vote-hidden");
-
+    const nodes = parentNode.querySelectorAll(".vote-display");
     console.log("dssd", nodes[0]);
-
+    childNodes[0].style.opacity = 0.9;
+    childNodes[1].style.opacity = 0.9;
+    nodes[0].style.visibility = "visible";
+    nodes[1].style.visibility = "visible";
     console.log("vote!");
   };
 
@@ -44,16 +42,12 @@ const CardContents = (props) => {
           </div>
 
           <div className="card-content__bottom-mintingInfo">
-            <div className="card-content__bottom-mintingInfo-mingtingDate">
-              <span>민팅 예정</span>
-              <span>{t.mintingDate}</span>
-            </div>
             <div
-              className="card-content__bottom-mintingInfo-voteInfo vote-button-opacity-low"
+              className="card-content__bottom-mintingInfo-voteInfo"
               id={t.id}
             >
               <div
-                className="card-content__bottom-mintingInfo-vote "
+                className="card-content__bottom-mintingInfo-vote"
                 onClick={clickVote}
               >
                 <div className="card-content__bottom-mintingInfo-vote__div">
@@ -61,20 +55,20 @@ const CardContents = (props) => {
                     <FontAwesomeIcon icon={faThumbsUp} />
                   </span>
                 </div>
-                <div className="card-content__bottom-mintingInfo-vote__div vote-hidden">
+                <div className="card-content__bottom-mintingInfo-vote__div ">
                   <span>{t.voteLike}</span>
                 </div>
               </div>
               <div
-                className="card-content__bottom-mintingInfo-vote "
+                className="card-content__bottom-mintingInfo-vote"
                 onClick={clickVote}
               >
-                <div className="card-content__bottom-mintingInfo-vote__div">
+                <div className="card-content__bottom-mintingInfo-vote__div ">
                   <span>
                     <FontAwesomeIcon icon={faThumbsDown} />
                   </span>
                 </div>
-                <div className="card-content__bottom-mintingInfo-vote__div vote-hidden">
+                <div className="card-content__bottom-mintingInfo-vote__div ">
                   <span>{t.voteUnLike}</span>
                 </div>
               </div>
@@ -99,13 +93,13 @@ const MintInfoList = () => {
 const MintInfoBoard = () => {
   return (
     <div className="rankingBoard rankingBoard-mingtingVoteBoard">
-      <div className="rankingBoard__header">Minting coming</div>
+      <div className="rankingBoard__header">NFT Projects</div>
       <MintInfoList></MintInfoList>
     </div>
   );
 };
 
-export const MintInfo = () => {
+export const MintedProjects = () => {
   return (
     <div>
       <MintInfoBoard></MintInfoBoard>
@@ -113,4 +107,4 @@ export const MintInfo = () => {
   );
 };
 
-export default MintInfo;
+export default MintedProjects;

@@ -180,7 +180,7 @@
   border-radius: 20px;
   width: 100px;
   justify-content: flex-start;
-  opacity: 0.3;
+  opacity: 0.9;
   cursor: pointer;
 }
 
@@ -207,6 +207,14 @@
   margin-left: 5px;
 }
 
-.vote-display {
+.vote-hidden {
   visibility: hidden;
+}
+
+.vote-button-opacity-low {
+  opacity: 0.3;
+}
+
+.vote-display {
+  visibility: visible;
 }
