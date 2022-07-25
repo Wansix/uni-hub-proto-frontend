@@ -52,17 +52,11 @@
 
 .card-content {
   width: 200px;
-  /* background-color: antiquewhite; */
   border-radius: 15px;
   margin-right: 30px;
   margin-bottom: 30px;
-  /* border: black solid 1px; */
   border-color: rgba(0, 0, 0, 0.12);
   box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.5);
-}
-
-.card-content:last-child {
-  margin-right: 0px;
 }
 
 .card-content a {
