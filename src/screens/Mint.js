@@ -66,9 +66,8 @@ export const Mint = () => {
       alert("지갑을 연결 해주세요.");
       return;
     }
-    unihubNFTApi.getLastNFTid(address).then(async (mintId) => {
-      console.log("mint Id ", mintId);
-      const remaining = MAX_SUPPLY - mintId;
+    unihubNFTApi.totalSupply().then(async (totalSupply) => {
+      const remaining = MAX_SUPPLY - totalSupply;
       setRemainingSupply(remaining);
     });
   }, []);

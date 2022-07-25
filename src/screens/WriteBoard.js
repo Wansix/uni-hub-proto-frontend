@@ -51,6 +51,7 @@ export const WriteBoard = () => {
     if (userInfo.profile_registered === false) {
       alert("글쓰기전에 먼저 등록해주세요.");
       window.location.href = "/myMenu";
+      return;
     }
 
     unihubNFTApi.getUserInfo(setUserInfo).then((userInfo) => {

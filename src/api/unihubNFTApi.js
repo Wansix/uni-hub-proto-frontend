@@ -397,6 +397,16 @@ export const tokenOfOwnerByIndex = async (account, index) => {
     .call();
 };
 
+export const totalSupply = async () => {
+  if (isMobile) return;
+  const caver = new Caver(window.klaytn);
+  const unihubNFTContract = new caver.klay.Contract(
+    contractABI,
+    contractAddress
+  );
+  return await unihubNFTContract.methods.totalSupply().call();
+};
+
 export const getLastNFTid = async (account) => {
   if (isMobile) return;
   return await getBalanceOf(account).then(async (tokenBalance) => {
