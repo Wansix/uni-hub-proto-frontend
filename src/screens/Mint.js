@@ -6,15 +6,20 @@ import * as kaikasApi from "../api/kaikasApi";
 import * as unihubNFTApi from "../api/unihubNFTApi.js";
 
 export const Mint = () => {
+  const [isLoading, setLoading] = useState(false);
   const [imgUrl, setImgUrl] = useState("img/randomNFT.png");
-  const [projectName, setProjectName] = useState("");
-  const [projectDescription, setProjectDescription] = useState("");
+  const [projectName, setProjectName] = useState("Uni-Cat");
+  const [projectDescription, setProjectDescription] =
+    useState(`Uni-Hub is a korean NFT community The Uni-cat are unique and
+  randomly generated 2D NFT PFP. Not only that, Uni-cat make coins
+  by contributing our systems. Just sponge off!!`);
   const [projectAttributes, setProjectAttributes] = useState({
-    background: "",
-    mane: "",
-    face: "",
-    beard: "",
-    glasses: "",
+    Body: "",
+    Cup: "",
+    Straw: "",
+    Water: "",
+    Background: "",
+    Word: "",
   });
 
   const mintNFT = async () => {
@@ -26,23 +31,112 @@ export const Mint = () => {
       return;
     }
 
+    setLoading(true);
+
     unihubNFTApi.mintNFT().then(async () => {
-      await unihubNFTApi.getLastNFTid(address).then((mintId) => {
+      await unihubNFTApi.getLastNFTid(address).then(async (mintId) => {
         console.log("mintingId 내부:", mintId);
-        unihubNFTApi.getProfileImageFromContract(setImgUrl, mintId);
-        unihubNFTApi.getNFTInfo(
-          setProjectName,
-          setProjectDescription,
-          setProjectAttributes,
-          mintId
-        );
+        await unihubNFTApi
+          .getProfileImageFromContract(setImgUrl, mintId)
+          .then(async () => {
+            await unihubNFTApi
+              .getNFTInfo(
+                setProjectName,
+                setProjectDescription,
+                setProjectAttributes,
+                mintId
+              )
+              .then(() => {
+                setLoading(false);
+              });
+          });
       });
     });
   };
 
   return (
     <div className="mint-wrapper">
-      <div className="mint-left-container">
+      <div className="mint-wrapper-header">
+        <h1>Uni-Cat</h1>
+        <h3>minting</h3>
+      </div>
+
+      <div className="mintingNFTInfo">
+        <div className="mintingNFTInfo__left-container">
+          <img src={imgUrl} alt="mintImg"></img>
+        </div>
+        <div className="mintingNFTInfo__right-container">
+          <div className="mintingNFTInfo__right-container__info">
+            <div className="mintingNFTInfo__right-container__info-name">
+              {/* <span>Name </span> */}
+              <span>{projectName}</span>
+              {/* <span>{projectName}</span> */}
+            </div>
+            <div className="mintingNFTInfo__right-container__info-description">
+              <span>Description</span>
+              <p>{projectDescription}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="minting">
+        <div className="mintingInfo">
+          <div className="mintingRemaining">
+            <span>NFT 잔여수량</span>
+            <span>50</span>
+          </div>
+          <div className="mintingPrice">
+            <span>가격</span>
+            <div className="mintingPrice-price">
+              <span>
+                <img src="https://static.opensea.io/tokens/KLAY.png"></img>
+              </span>
+              <span>250 KLAY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mintingButton-wrapper">
+        <Button
+          variant="success"
+          disabled={isLoading}
+          onClick={!isLoading ? mintNFT : null}
+        >
+          {isLoading ? "Loading..." : "Minting"}
+        </Button>
+      </div>
+
+      <div className="mintingAttributes-wrapper">
+        <h2>Attributes</h2>
+        <div className="mintingAttributes">
+          <div className="mintingAttributes__attribute">
+            <span>Body</span>
+            <span>{projectAttributes.Body}</span>
+          </div>
+          <div className="mintingAttributes__attribute">
+            <span>Cup</span>
+            <span>{projectAttributes.Cup}</span>
+          </div>
+          <div className="mintingAttributes__attribute">
+            <span>Straw</span>
+            <span>{projectAttributes.Straw}</span>
+          </div>
+          <div className="mintingAttributes__attribute">
+            <span>Water</span>
+            <span>{projectAttributes.Water}</span>
+          </div>
+          <div className="mintingAttributes__attribute">
+            <span>Background</span>
+            <span>{projectAttributes.Background}</span>
+          </div>
+          <div className="mintingAttributes__attribute">
+            <span>Word</span>
+            <span>{projectAttributes.Word}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="mint-left-container">
         <img src={imgUrl} alt="mintImg"></img>
       </div>
       <div className="mint-right-container">
@@ -86,7 +180,7 @@ export const Mint = () => {
             <span>{projectAttributes.glasses}</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

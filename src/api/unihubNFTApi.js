@@ -266,7 +266,7 @@ export const getProfileImg = (setProfileImgUrl) => {
   }
 };
 
-export const getNFTInfo = (
+export const getNFTInfo = async (
   setName,
   setDescription,
   setAttributes,
@@ -274,26 +274,28 @@ export const getNFTInfo = (
 ) => {
   if (isMobile) return;
   // console.log("mintmint ID Info", userProfileNFT_id);
-  tokenURI(userProfileNFT_id).then(async (result) => {
+  return await tokenURI(userProfileNFT_id).then(async (result) => {
     const url = result;
 
     try {
-      axios.get(url, headers).then(async (res) => {
+      return await axios.get(url, headers).then(async (res) => {
         if (res.status === 200) {
           setName(res.data.name);
           setDescription(res.data.description);
           const attributes = {
-            background: res.data.attributes[0]["value"],
-            mane: res.data.attributes[1]["value"],
-            face: res.data.attributes[2]["value"],
-            beard: res.data.attributes[3]["value"],
-            glasses: res.data.attributes[4]["value"],
+            Body: res.data.attributes[0]["value"],
+            Cup: res.data.attributes[1]["value"],
+            Straw: res.data.attributes[2]["value"],
+            Water: res.data.attributes[3]["value"],
+            Background: res.data.attributes[4]["value"],
+            Word: res.data.attributes[5]["value"],
           };
           setAttributes(attributes);
-
+          return attributes;
           // setAttributes();
         } else {
           console.log("실패");
+          return 0;
         }
       });
     } catch (err) {
@@ -318,7 +320,8 @@ export const getProfileImageFromContract = async (
       return await axios.get(url, headers).then(async (res) => {
         if (res.status === 200) {
           setProfileImgUrl(res.data.image);
-          localStorage.setItem(USER_IMAGE_URL, res.data.image);
+          console.log("mingting image", res.data.image);
+          // localStorage.setItem(USER_IMAGE_URL, res.data.image);
           return res.data.image;
         } else {
           console.log("실패");
