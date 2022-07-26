@@ -104,6 +104,7 @@
   width: 90%;
   text-align: center;
   padding-bottom: 10px;
+  white-space: nowrap;
 }
 
 .card-content__bottom-price-wrapper {

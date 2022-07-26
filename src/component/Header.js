@@ -25,7 +25,7 @@ const Header = () => {
       </div>
       <div className="header__unihubInfo">
         <Nav.Link
-          href="/https://undefined-388.gitbook.io/unihub/undefined-1/c2e"
+          href="https://undefined-388.gitbook.io/unihub/undefined-1/c2e"
           target="_blank"
         >
           Docs
