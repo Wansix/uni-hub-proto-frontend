@@ -49,8 +49,10 @@ function Content() {
     <div className="posting-wrapper">
       <div className="posting-wrapper__header">
         <div className="posting-wrapper__header-title">
-          <div>{postData.title}</div>
-          <div>
+          <div className="posting-wrapper__header-title-item">
+            {postData.title}
+          </div>
+          <div className="posting-wrapper__header-title-item">
             <span>작성일</span>
             <span>{postData.postingDate}</span>
           </div>
