@@ -159,7 +159,9 @@ const Home = () => {
     <div className="home-wrapper">
       <div className="home-wrapper__header">
         <div className="home-wrapper__header-ad">
-          <img src="img/mainAd.png"></img>
+          <a href="https://projectlion.io/" target="_blank">
+            <img src="img/mainAd.png"></img>
+          </a>
         </div>
       </div>
 
