@@ -12,7 +12,7 @@ export const MintingComingList = [
     id: 2,
     mintingDate: "22.07.29",
     name: "델리타운",
-    img: "http://delitown.net/kmong-delitown/public/img/delitown-new-img02.jpg",
+    img: "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0bc17488-10d9-4c37-bfbf-497b662b678d%2FUntitled.png&blockId=1394ef12-25ee-4deb-9ade-e8dff1ef699f",
     voteLike: 523,
     voteUnLike: 3,
     link: "http://delitown.net/",
