@@ -292,80 +292,36 @@
   }
 
   .card-content__bottom-mintingInfo {
-    padding: 0px 10px;
-    width: 200px;
+    width: 100px;
   }
 
   .card-content__bottom-mintingInfo-mingtingDate {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
+    margin-top: 5px;
+    width: 100%;
   }
 
   /* 민팅 예정 */
   .card-content__bottom-mintingInfo-mingtingDate span:first-child {
-    font-size: 14px;
-    opacity: 0.5;
-    margin-bottom: 5px;
+    font-size: 10px;
   }
   /* 민팅예정 날짜 */
   .card-content__bottom-mintingInfo-mingtingDate span:last-child {
-    font-size: 17px;
-    opacity: 0.9;
-    font-weight: 500;
+    font-size: 14px;
   }
 
   .card-content__bottom-mintingInfo-voteInfo {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
   }
   .card-content__bottom-mintingInfo-vote {
-    margin: 0px 5px;
-    margin-top: 10px;
-    background-color: forestgreen;
-    padding: 10px 3px;
-    display: flex;
-    border-radius: 20px;
-    width: 100px;
-    justify-content: flex-start;
-    opacity: 0.9;
-    cursor: pointer;
-  }
+    margin: 0px 2px;
 
-  .card-content__bottom-mintingInfo-vote__div:first-child {
-    width: 30%;
-    display: flex;
-    justify-content: flex-end;
-    /* background-color: tomato; */
-  }
+    padding: 8px 3px;
 
-  .card-content__bottom-mintingInfo-vote__div:last-child {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    /* background-color: wheat; */
-    padding-right: 10px;
+    width: 50px;
   }
 
   .card-content__bottom-mintingInfo-vote__div span {
     color: white;
-  }
-
-  .card-content__bottom-mintingInfo-vote__div span:first-child {
-    margin-left: 5px;
-  }
-
-  .vote-hidden {
-    visibility: hidden;
-  }
-
-  .vote-button-opacity-low {
-    opacity: 0.3;
-  }
-
-  .vote-display {
-    visibility: visible;
+    font-size: 12px;
   }
 }
