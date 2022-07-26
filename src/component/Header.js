@@ -23,6 +23,14 @@ const Header = () => {
         <Nav.Link href="/community">자유</Nav.Link>
         <Nav.Link href="/hot">Hot</Nav.Link>
       </div>
+      <div className="header__unihubInfo">
+        <Nav.Link
+          href="/https://undefined-388.gitbook.io/unihub/undefined-1/c2e"
+          target="_blank"
+        >
+          Docs
+        </Nav.Link>
+      </div>
     </div>
   );
 };
