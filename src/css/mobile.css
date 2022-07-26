@@ -1,5 +1,31 @@
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .right-container {
+    display: none;
+  }
+} */
+
+@media screen and (max-width: 1000px) {
+  .right-container {
+    display: none;
+  }
+
+  .main-container {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .main-container::-webkit-scrollbar {
+    display: none;
+  }
+  .rankingBoard__header {
+    font-size: 30px;
+  }
+  .home-wrapper__header-ad img {
+    width: 900px;
+    /* height: 100px; */
+  }
+
+  .header__unihubInfo {
     display: none;
   }
 }

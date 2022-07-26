@@ -23,6 +23,13 @@
   border: none;
 }
 
+@media screen and (max-width: 1000px) {
+  .arrow-button {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .main-container::-webkit-scrollbar {
   /* display: none; */
 }

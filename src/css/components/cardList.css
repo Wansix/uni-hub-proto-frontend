@@ -220,3 +220,193 @@
 .vote-display {
   visibility: visible;
 }
+
+@media screen and (max-width: 1000px) {
+  .rankingBoard__header-tabs {
+    margin-left: 0px;
+    font-size: 10px;
+  }
+  .nav.nav-pills .nav-link.active {
+    padding: 10px 10px;
+  }
+  .nav.nav-pills .nav-link {
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+  .card-contents {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-content {
+    width: 100px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+
+  /* .card-content a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .card-content a:hover {
+    text-decoration: none;
+    color: inherit;
+  } */
+
+  /* .card-content__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .card-content__top img {
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+  }
+
+  /* .card-content__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 0px;
+  } */
+
+  .card-content__bottom-projectName {
+    padding-bottom: 0px;
+    /* width: 100%;
+    display: flex;
+    justify-content: center; */
+  }
+
+  .card-content__bottom-projectName span {
+    font-size: 12px;
+    font-weight: 600;
+    /* border-bottom: black solid 1px; */
+    /* border-color: rgba(0, 0, 0, 0.12); */
+    /* width: 90%; */
+    /* text-align: center; */
+    padding-bottom: 10px;
+    /* white-space: nowrap; */
+  }
+
+  .card-content__bottom-price-wrapper {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+    /* width: 100%; */
+  }
+
+  /* floor price */
+  .card-content__bottom-price-wrapper > span {
+    font-size: 12px;
+    margin-top: 5px;
+    opacity: 0.5;
+    margin-bottom: 2px;
+  }
+
+  .card-content__bottom-price-wrapper__price {
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .card-content__bottom-price-wrapper__price img {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+    /* margin-right: 6px; */
+  }
+
+  .card-content__bottom-price-wrapper__price span {
+    color: black;
+    font-size: 14px;
+  }
+
+  .card-content__bottom-mintingInfo {
+    /* background-color: tomato; */
+    /* display: flex;
+  
+    justify-content: space-between;
+    align-items: center; */
+    padding: 0px 10px;
+    width: 200px;
+  }
+
+  .card-content__bottom-mintingInfo-mingtingDate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+  }
+
+  /* 민팅 예정 */
+  .card-content__bottom-mintingInfo-mingtingDate span:first-child {
+    font-size: 14px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+  }
+  /* 민팅예정 날짜 */
+  .card-content__bottom-mintingInfo-mingtingDate span:last-child {
+    font-size: 17px;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+
+  .card-content__bottom-mintingInfo-voteInfo {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .card-content__bottom-mintingInfo-vote {
+    margin: 0px 5px;
+    margin-top: 10px;
+    background-color: forestgreen;
+    padding: 10px 3px;
+    display: flex;
+    border-radius: 20px;
+    width: 100px;
+    justify-content: flex-start;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .card-content__bottom-mintingInfo-vote__div:first-child {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: tomato; */
+  }
+
+  .card-content__bottom-mintingInfo-vote__div:last-child {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    /* background-color: wheat; */
+    padding-right: 10px;
+  }
+
+  .card-content__bottom-mintingInfo-vote__div span {
+    color: white;
+  }
+
+  .card-content__bottom-mintingInfo-vote__div span:first-child {
+    margin-left: 5px;
+  }
+
+  .vote-hidden {
+    visibility: hidden;
+  }
+
+  .vote-button-opacity-low {
+    opacity: 0.3;
+  }
+
+  .vote-display {
+    visibility: visible;
+  }
+}
