@@ -6,7 +6,7 @@ export const MintingComingList = [
     img: "https://gateway.pinata.cloud/ipfs/QmQrawZQ5Ld5xEaABCUUSDuv1rZVih3RtY4iqy1YgRpML7",
     voteLike: 1024,
     voteUnLike: 2,
-    link: "https://cozy-gumdrop-204657.netlify.app/",
+    link: "https://uni-hub.netlify.app",
   },
   {
     id: 2,
