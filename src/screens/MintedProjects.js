@@ -41,6 +41,14 @@ const CardContents = (props) => {
             <span>{t.name}</span>
           </div>
 
+          <div className="card-content__bottom-price-wrapper">
+            <span>floor price</span>
+            <div className="card-content__bottom-price-wrapper__price">
+              <img src="https://static.opensea.io/tokens/KLAY.png"></img>
+              <span>{t.floorPrice} klay</span>
+            </div>
+          </div>
+
           <div className="card-content__bottom-mintingInfo">
             <div
               className="card-content__bottom-mintingInfo-voteInfo"

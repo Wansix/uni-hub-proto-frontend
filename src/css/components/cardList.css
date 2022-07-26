@@ -171,6 +171,7 @@
 .card-content__bottom-mintingInfo-voteInfo {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 .card-content__bottom-mintingInfo-vote {
   margin: 0px 5px;
