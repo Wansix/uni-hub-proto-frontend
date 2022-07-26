@@ -40,14 +40,14 @@ const Header = () => {
             alt="link"
           ></img>
         </Nav.Link>
-        <Nav.Link href="mailto:support@unihub001@gmail.com" target="_blank">
-          <img src={window.location.origin + "/img/email.png"} alt="link"></img>
-        </Nav.Link>
         <Nav.Link href="https://discord.gg/Sbaw9D57" target="_blank">
           <img
             src={window.location.origin + "/img/discord.png"}
             alt="link"
           ></img>
+        </Nav.Link>
+        <Nav.Link href="mailto:support@unihub001@gmail.com" target="_blank">
+          <img src={window.location.origin + "/img/email.png"} alt="link"></img>
         </Nav.Link>
       </div>
     </div>
