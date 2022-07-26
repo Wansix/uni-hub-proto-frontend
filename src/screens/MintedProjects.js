@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
-import { MintingComingList } from "../constansts/mintingComingList.js";
+import { TopNFTProjectLists } from "../constansts/topNFTlists.js";
 
 const CardContents = (props) => {
   const list = [];
@@ -17,12 +17,12 @@ const CardContents = (props) => {
     console.log(props.cardList[id]);
     console.log(parentNode);
 
-    const nodes = parentNode.querySelectorAll(".vote-display");
-    console.log("dssd", nodes[0]);
-    childNodes[0].style.opacity = 0.9;
-    childNodes[1].style.opacity = 0.9;
-    nodes[0].style.visibility = "visible";
-    nodes[1].style.visibility = "visible";
+    // const nodes = parentNode.querySelectorAll(".vote-display");
+    // console.log("dssd", nodes[0]);
+    // childNodes[0].style.opacity = 0.9;
+    // childNodes[1].style.opacity = 0.9;
+    // nodes[0].style.visibility = "visible";
+    // nodes[1].style.visibility = "visible";
     console.log("vote!");
   };
 
@@ -82,7 +82,7 @@ const CardContents = (props) => {
 };
 
 const MintInfoList = () => {
-  const [NFTProjectList, setTopNFTProjectList] = useState(MintingComingList);
+  const [NFTProjectList, setTopNFTProjectList] = useState(TopNFTProjectLists);
   return (
     <div className="card-contents card-contents-wrap">
       <CardContents cardList={NFTProjectList}></CardContents>
