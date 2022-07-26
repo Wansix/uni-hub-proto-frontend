@@ -24,13 +24,4 @@
   .home-wrapper__header-ad::-webkit-scrollbar {
     display: none;
   }
-
-  .home-wrapper__header-ad img {
-    /* width: 100%; */
-    /* height: 120px; */
-  }
-
-  .header__unihubInfo {
-    display: none;
-  }
 }

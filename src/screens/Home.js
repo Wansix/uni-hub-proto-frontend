@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import Nav from "react-bootstrap/Nav";
 
 import { TopNFTProjectLists } from "../constansts/topNFTlists.js";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
@@ -153,6 +154,28 @@ const RankingBoard = () => {
   );
 };
 
+const Footer = () => {
+  return (
+    <div className="header__unihubInfo unihubInfo-mobile">
+      <Nav.Link
+        href="https://undefined-388.gitbook.io/unihub/undefined-1/c2e"
+        target="_blank"
+      >
+        <img src={window.location.origin + "/img/docs.png"} alt="link"></img>
+      </Nav.Link>
+      <Nav.Link href="http://twitter.com/@unihub001" target="_blank">
+        <img src={window.location.origin + "/img/twitter.png"} alt="link"></img>
+      </Nav.Link>
+      <Nav.Link href="https://discord.gg/Sbaw9D57" target="_blank">
+        <img src={window.location.origin + "/img/discord.png"} alt="link"></img>
+      </Nav.Link>
+      <Nav.Link href="mailto:support@unihub001@gmail.com" target="_blank">
+        <img src={window.location.origin + "/img/email.png"} alt="link"></img>
+      </Nav.Link>
+    </div>
+  );
+};
+
 const Home = () => {
   console.log("current width", window.innerWidth);
   return (
@@ -166,6 +189,7 @@ const Home = () => {
       </div>
 
       <RankingBoard></RankingBoard>
+      <Footer></Footer>
     </div>
   );
 };
