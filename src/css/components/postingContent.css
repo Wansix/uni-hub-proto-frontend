@@ -130,4 +130,9 @@
     border-bottom: black solid 1px;
     border-color: rgba(0, 0, 0, 0.2);
   }
+
+  .posting-wrapper__content img {
+    height: auto !important;
+    max-width: 100% !important;
+  }
 }
