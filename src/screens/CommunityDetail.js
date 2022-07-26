@@ -36,6 +36,13 @@ function Content() {
 
       postData.postingDate = viewPostingDate;
 
+      console.log("data", postData.address);
+      const account = postData.address;
+
+      const frontAccount = account.substr(0, 4);
+      const backAccount = account.substr(-4);
+      postData.address = frontAccount + "..." + backAccount;
+
       setPostData(postData);
     });
   };
