@@ -20,8 +20,11 @@ const CardContents = (props) => {
     console.log(parentNode);
 
     const nodes = parentNode.querySelectorAll(".vote-hidden");
-    nodes[0].classList.remove("vote-hidden");
-    nodes[1].classList.remove("vote-hidden");
+    console.log("nodes", nodes);
+    if (nodes.length) {
+      nodes[0].classList.remove("vote-hidden");
+      nodes[1].classList.remove("vote-hidden");
+    }
 
     console.log("dssd", nodes[0]);
 
