@@ -22,3 +22,11 @@
   justify-content: center;
   border: none;
 }
+
+.main-container::-webkit-scrollbar {
+  /* display: none; */
+}
+
+.right-container::-webkit-scrollbar {
+  display: none;
+}

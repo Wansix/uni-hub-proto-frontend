@@ -21,6 +21,7 @@
 
 .App {
   display: flex;
-  height: 100vh;
+  /* min-height: 200vh; */
+  /* overflow: scroll; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
