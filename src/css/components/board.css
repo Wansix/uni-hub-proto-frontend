@@ -49,6 +49,20 @@
   padding: 10px 0px;
 }
 
+.boardRow__bodyInfo {
+  width: 70%;
+  /* background-color: tomato; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.boardRow__footerInfo {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
 .board__content {
   /* background-color: aquamarine; */
   text-align: center;
@@ -70,19 +84,26 @@
 }
 
 /* post id */
-.board__content:first-child {
-  width: 5%;
+.boardRow__bodyInfo .board__content:first-child {
+  width: 7%;
+  /* white-space: nowrap; */
 }
 
 /* title */
 
-.board__content:nth-child(2) {
-  width: 55%;
+.boardRow__bodyInfo .board__content:nth-child(2) {
+  width: 83%;
+  /* background-color: tomato; */
+}
+
+.board__content-title {
+  text-align: left;
+  margin-left: 30px;
 }
 
 /* profile */
 
-.board__content:nth-child(3) {
+.boardRow__bodyInfo .board__content:nth-child(3) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,16 +111,123 @@
 }
 
 /* date */
-.board__content:nth-child(4) {
-  width: 20%;
+.boardRow__footerInfo .board__content:first-child {
+  width: 70%;
 }
 
 /* 조회수 */
-.board__content:nth-child(5) {
-  width: 5%;
+.boardRow__footerInfo .board__content:nth-child(2) {
+  width: 15%;
 }
 
 /* 추천수 */
-.board__content:nth-child(6) {
-  width: 5%;
+.boardRow__footerInfo .board__content:last-child {
+  width: 15%;
+}
+
+.board-lookup-display {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .communityBoard-wrapper {
+    padding: 0px 10px;
+  }
+
+  .communityBoard-header {
+    padding: 0px;
+    margin-top: 3px;
+  }
+
+  .communityBoard-header span {
+    font-size: 20px;
+  }
+
+  .communityBoard-header a {
+    display: none;
+  }
+
+  .communityBoard-wrapper__board-wrapper {
+    padding: 0px;
+  }
+
+  .board {
+    margin: 0px;
+    padding: 10px 0px;
+  }
+
+  .boardRow {
+    display: block;
+  }
+
+  .board__header {
+    display: none;
+  }
+
+  .boardRow__bodyInfo {
+    width: 100%;
+  }
+  .board__content {
+    text-align: left;
+  }
+
+  .board__content-title {
+    margin-left: 10px;
+  }
+
+  .board__content img {
+    height: 45px;
+    width: 45px;
+    border-radius: 20%;
+  }
+
+  /* post id */
+  .boardRow__bodyInfo .board__content:first-child {
+    display: none;
+  }
+
+  /* title */
+
+  .boardRow__bodyInfo .board__content:nth-child(2) {
+    width: 80%;
+    text-align: left;
+    font-weight: 600;
+  }
+  /* profile */
+  .boardRow__bodyInfo .board__content:nth-child(3) {
+    width: 20%;
+  }
+  .boardRow__bodyInfo .board__content:nth-child(3) span {
+    position: relative;
+    top: 6px;
+    font-size: 12px;
+  }
+
+  .boardRow__footerInfo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 13px;
+  }
+
+  .board-lookup-display {
+    display: initial;
+    margin-right: 2px;
+  }
+
+  /* date */
+  .boardRow__footerInfo .board__content:first-child {
+    width: 32%;
+    /* background-color: tomato; */
+  }
+
+  /* 조회수 */
+  .boardRow__footerInfo .board__content:nth-child(2) {
+    width: 15%;
+  }
+
+  /* 추천수 */
+  .boardRow__footerInfo .board__content:last-child {
+    width: 15%;
+  }
 }

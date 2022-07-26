@@ -6,6 +6,7 @@ axios.defaults.withCredentials = true;
 
 const headers = { withCredentials: true };
 const unihubServerURL = process.env.REACT_APP_UNIHUB_SERVER_URL;
+const SCREEN_SIZE_MOBILE = 1000;
 
 const Board = () => {
   const [boardList, setBoardList] = useState([]);
@@ -26,15 +27,19 @@ const Board = () => {
       if (boards.length > 0) {
         list.push(
           <li key={"header"} className="boardRow board__header">
-            <div className="board__content">{"번호"}</div>
-            <div className="board__content">{"제목"}</div>
-            <div className="board__content">{"글쓴이"}</div>
-
-            <div className="board__content">{"날짜"}</div>
-            <div className="board__content">{"조회"}</div>
-            <div className="board__content">{"추천"}</div>
+            <div className="boardRow__bodyInfo">
+              <div className="board__content">{"번호"}</div>
+              <div className="board__content">{"제목"}</div>
+              <div className="board__content">{"글쓴이"}</div>
+            </div>
+            <div className="boardRow__footerInfo">
+              <div className="board__content">{"날짜"}</div>
+              <div className="board__content">{"조회"}</div>
+              <div className="board__content">{"추천"}</div>
+            </div>
           </li>
         );
+
         boards.map(async (item) => {
           // console.log(item);
 
@@ -52,18 +57,28 @@ const Board = () => {
           const contentUrl = `/community/${item.postingID}`;
           list.push(
             <li key={item.postingID} className="boardRow">
-              <div className="board__content">{item.postingID}</div>
-              <div className="board__content">
-                <a href={contentUrl}>{item.title}</a>
-              </div>
-              <div className="board__content">
-                <img src={item.profileImgUrl} alt="profileImg"></img>
-                <span>{item.nickName}</span>
+              <div className="boardRow__bodyInfo">
+                <div className="board__content">{item.postingID}</div>
+                <div className="board__content board__content-title">
+                  <a href={contentUrl}>{item.title}</a>
+                </div>
+                <div className="board__content">
+                  <img src={item.profileImgUrl} alt="profileImg"></img>
+                  <span>{item.nickName}</span>
+                </div>
               </div>
 
-              <div className="board__content">{viewPostingDate}</div>
-              <div className="board__content">{item.viewCount}</div>
-              <div className="board__content">{item.recommendCount}</div>
+              <div className="boardRow__footerInfo">
+                <div className="board__content">{viewPostingDate}</div>
+                <div className="board__content">
+                  <span className="board-lookup-display">조회</span>
+                  <span>{item.viewCount}</span>
+                </div>
+                <div className="board__content">
+                  <span className="board-lookup-display">추천</span>
+                  <span>{item.recommendCount}</span>
+                </div>
+              </div>
             </li>
           );
         });
@@ -89,7 +104,7 @@ export const Community = () => {
         <Nav.Link href="/community/write">글쓰기</Nav.Link>
       </div>
 
-      <div>
+      <div className="communityBoard-wrapper__board-wrapper">
         <Board></Board>
       </div>
     </div>
