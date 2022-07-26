@@ -222,6 +222,9 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .rankingBoard__header {
+    font-size: 25px;
+  }
   .rankingBoard__header-tabs {
     margin-left: 0px;
     font-size: 10px;
@@ -244,59 +247,21 @@
     margin-bottom: 30px;
   }
 
-  /* .card-content a {
-    color: black;
-    text-decoration: none;
-  }
-
-  .card-content a:hover {
-    text-decoration: none;
-    color: inherit;
-  } */
-
-  /* .card-content__top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-
   .card-content__top img {
     height: 100px;
     width: 100px;
     border-radius: 15px;
   }
 
-  /* .card-content__bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 15px 0px;
-  } */
-
   .card-content__bottom-projectName {
     padding-bottom: 0px;
-    /* width: 100%;
-    display: flex;
-    justify-content: center; */
   }
 
   .card-content__bottom-projectName span {
     font-size: 12px;
     font-weight: 600;
-    /* border-bottom: black solid 1px; */
-    /* border-color: rgba(0, 0, 0, 0.12); */
-    /* width: 90%; */
-    /* text-align: center; */
-    padding-bottom: 10px;
-    /* white-space: nowrap; */
-  }
 
-  .card-content__bottom-price-wrapper {
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start; */
-    /* width: 100%; */
+    padding-bottom: 10px;
   }
 
   /* floor price */
@@ -319,7 +284,6 @@
     height: 12px;
     position: relative;
     top: 1px;
-    /* margin-right: 6px; */
   }
 
   .card-content__bottom-price-wrapper__price span {
@@ -328,11 +292,6 @@
   }
 
   .card-content__bottom-mintingInfo {
-    /* background-color: tomato; */
-    /* display: flex;
-  
-    justify-content: space-between;
-    align-items: center; */
     padding: 0px 10px;
     width: 200px;
   }
