@@ -18,6 +18,7 @@
     프로필 설정 페이지 (지갑의 UNI-CAT NFT 확인 및 설정 기능)
     UNI-CAT NFT 민팅 페이지 구현(Klaytn 메인넷 민팅 구현)
     TOP NFT CSS 구현
+    모바일 CSS 구현
     
   ### 민팅완료, 민팅 예정
     투표기능 CSS 구현
